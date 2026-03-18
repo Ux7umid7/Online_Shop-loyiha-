@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Inter", sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    backdrop-filter: blur(12px);
+}
+
+button,
+a {
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.header__wrapper {
+    padding: 20px 0px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__list {
+    display: flex;
+    gap: 40px;
+}
+
+.header__icons {
+    display: flex;
+    gap: 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    align-items: center;
+}
+
+.search {
+    background-color: #ebebeb;
+    color: #989898;
+    display: flex;
+    width: 372px;
+    height: 56px;
+    gap: 8px;
+    align-items: center;
+    opacity: 1;
+    border-radius: 8px;
+    padding: 16px;
+    cursor: default;
+}
+
+.header__search {
+    border: none;
+    background-color: #ebebeb;
+    color: #656565;
+    width: 100%;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+
+    line-height: 18px;
+    letter-spacing: 0%;
+}
+
+.header__link {
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    color: #0000006d;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.header__item:nth-child(1)>.header__link {
+    color: black;
+}
+
+.header__icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #000000bd;
+}
+
+.payment {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    padding: 40px 0;
+}
+
+.payment__wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.payment__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.payment__item {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.payment__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.payment__product-img {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.payment__product-name {
+    flex: 1;
+    font-size: 16px;
+}
+
+.payment__product-price {
+    font-weight: bold;
+    color: #333;
+}
+
+.payment__address,
+.payment__telnomer {
+    margin-top: 20px;
+}
+
+.payment__address input,
+.payment__telnomer input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-top: 8px;
+}
+
+.payment__subtotal,
+.payment__tax,
+.payment__total {
+    font-weight: 600;
+}
+
+.payment__item--total {
+    border-top: 2px solid #eee;
+    padding-top: 10px;
+}
+
+.payment__total-price {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.payment__right {
+    margin-top: 30px;
+}
+
+.payment__subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.payment__right input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.buttons .back,
+.buttons .pay {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.header__link:hover {
+    color: black;
+}
+
+.buttons .back {
+    background: #ddd;
+    color: #333;
+}
+
+.buttons .pay {
+    background: #2a7ae4;
+    color: #fff;
+    transition: background 0.3s ease;
+}
+
+.buttons .pay:hover {
+    background: #1a5ac7;
+}
+
+footer {
+    background-color: black;
+}
+
+.footer__wrapper {
+    display: flex;
+    color: #cfcfcf;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 0;
+}
+
+.footer__icons {
+    display: flex;
+    font-size: 16px;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 30px;
+}
+
+.footer__text {
+    margin: 8px 0;
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+
+    line-height: 32px;
+    letter-spacing: 0%;
+}
+
+.footer__txt {
+    margin-top: 24px;
+    margin-bottom: 80px;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+
+    line-height: 171%;
+    letter-spacing: 0%;
+}
+
+.footer__title {
+    font-family: Inter;
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 16px;
+
+    line-height: 16px;
+    letter-spacing: 0%;
+}
+
+.back_link {
+    color: black;
+}
+
+@media (max-width: 992px) {
+    .header__wrapper {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .payment__wrapper {
+        padding: 20px;
+    }
+
+    .footer__wrapper {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .header__list {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .header__icons {
+        gap: 20px;
+    }
+
+    .search {
+        width: 100%;
+        height: 48px;
+        padding: 12px;
+    }
+
+    .payment__list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .payment__product-img {
+        width: 40px;
+        margin-bottom: 8px;
+    }
+
+    .payment__product-name {
+        font-size: 14px;
+    }
+
+    .payment__product-price {
+        font-size: 14px;
+    }
+
+    .payment__right input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .buttons .back,
+    .buttons .pay {
+        width: 100%;
+    }
+
+    .footer__wrapper {
+        padding: 40px 20px;
+    }
+
+    .footer__icons {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+
+    outline: none;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./assets/form-bg.svg"), url("./assets/form-bg.svg");
+    background-position: calc(50% + 260px) calc(50% + 140px);
+    background-repeat: no-repeat;
+    flex-direction: column;
+}
+
+button,
+a {
+    cursor: pointer;
+
+}
+
+.error {
+    color: red;
+    margin-bottom: 18px;
+}
+
+.form {
+
+    padding: 30px 40px;
+    border-radius: 18px;
+    text-align: center;
+
+}
+
+
+
+.password-box>input {
+    border: none;
+
+}
+
+.password-box {
+    border: 2px solid #E0E0E0;
+
+    margin-bottom: 18px;
+
+    cursor: default;
+    width: 326px;
+    height: 55px;
+    transition: 0.3s linear;
+    border-radius: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    background: #F1F1F1;
+
+
+    input {
+
+        font-weight: 700;
+        font-size: 20px;
+        background: #F1F1F1;
+        width: 80%;
+        line-height: 100%;
+        letter-spacing: 0%;
+
+
+    }
+}
+
+.parol__unut {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    text-align: start;
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+#email {
+    margin-bottom: 18px;
+    background: #ffffff;
+    transition: 0.3s linear;
+    border: 2px solid #E0E0E0;
+    padding: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 326px;
+    height: 55px;
+
+    border-radius: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    font-weight: 700;
+    font-size: 20px;
+
+    line-height: 100%;
+    letter-spacing: 0%;
+
+}
+
+.title {
+    margin-bottom: 18px;
+
+    font-weight: 900;
+    font-size: 45px;
+
+    line-height: 100%;
+    letter-spacing: 0%;
+
+}
+
+#submit {
+    background-color: #ffffff;
+    border: none;
+    background-color: #5EC186;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    width: 250px;
+    height: 55px;
+    border-radius: 65px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    transition: 0.3s linear;
+}
+
+#submit:active {
+    transform: scale(0.95);
+}
+
+.password-box:focus-within {
+    box-shadow: 1px 1px 15px #0000008f;
+
+}
+
+#email:focus {
+    box-shadow: 1px 1px 15px #0000008f;
+}

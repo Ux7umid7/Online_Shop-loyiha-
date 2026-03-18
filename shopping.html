@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codai_Shopping</title>
+  <!--  -->
+  <link rel="shortcut icon" href="./assets/logo.jpg" type="image/x-icon" />
+
+  <!-- (fontawesome link) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- (end fontawesome link) -->
+
+  <!--  -->
+  <link rel="stylesheet" href="shopping.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header__wrapper">
+        <img src="/assets/logo.jpg" alt="logo" class="logo" />
+        <div class="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" class="header__search" placeholder="Search" />
+        </div>
+        <nav>
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="main.html" class="header__link">Home</a>
+            </li>
+            <li class="header__item">
+              <a href="#shop" class="header__link">Shopping</a>
+            </li>
+            <li class="header__item">
+              <a href="#footer" class="header__link">Footer</a>
+            </li>
+          </ul>
+          <!-- <ul class="header__icons">
+            <li class="header__icon">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </li>
+            <li class="header__icon">
+              <i class="fa-solid fa-user"></i>
+            </li>
+          </ul> -->
+        </nav>
+      </div>
+    </div>
+  </header>
+  <hr>
+  <!--  -->
+  <main id="shop">
+    <section class="store">
+      <div class="container">
+        <div class="store__wrapper">
+          <div class="store__left">
+            <p class="store__txt">Shopping Cart</p>
+            <ul>
+              <li class="store__cart">
+                <img src="./assets/iphone.png" alt="product" class="product__img" />
+                <p class="cart__info">
+                  Apple iPhone 14 Pro Max <br />
+                  128Gb Deep Purple
+                </p>
+                <div class="cart__number">
+                  <button class="cart__dcrmnt">-</button>
+                  <p class="number">1</p>
+                  <button class="cart__incrmnt">+</button>
+                </div>
+                <div class="cart__price">$1399</div>
+              </li>
+              <hr />
+              <li class="store__cart">
+                <img src="./assets/airpods.png" alt="product" class="product__img" />
+                <p class="cart__info">AirPods Max Silver</p>
+                <div class="cart__number">
+                  <button class="cart__dcrmnt2">-</button>
+                  <p class="number2">1</p>
+                  <button class="cart__incrmnt2">+</button>
+                </div>
+                <div class="cart__price2">$549</div>
+              </li>
+              <hr />
+              <li class="store__cart">
+                <img src="./assets/watch.png" alt="product" class="product__img" />
+                <p class="cart__info">
+                  Apple Watch Series 9 GPS <br />
+                  41mm Starlight <br />
+                  Aluminium
+                </p>
+                <div class="cart__number">
+                  <button class="cart__dcrmnt3">-</button>
+                  <p class="number3">1</p>
+                  <button class="cart__incrmnt3">+</button>
+                </div>
+                <div class="cart__price3">$399</div>
+              </li>
+            </ul>
+          </div>
+          <div class="store__right">
+            <div class="order__box">
+              <p class="order__summary">Order Summmary</p>
+              <p class="card__number">Your bonus card number</p>
+              <div class="card">
+                <input class="card__num" type="text" placeholder="Enter Card Number" />
+                <button class="apply" type="submit">Apply</button>
+              </div>
+              <p class="card__error"></p>
+              <ul class="order__list">
+                <li order__item>
+                  <p class="order__subtotal">Subtotal</p>
+                  <p class="subtotal__price">2347$</p>
+                </li>
+                <li order__item>
+                  <p class="order__percent">Percentage 2%</p>
+                  <p class="percent__price">47$</p>
+                </li>
+                <li order__item>
+                  <p class="order__total">Total</p>
+                  <p class="total__price">2394$</p>
+                </li>
+              </ul>
+              <button type="submit" class="chek">Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--  -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+        <div class="footer__col">
+          <img src="/assets/logo.jpg" alt="logo" class="logo" />
+          <p class="footer__txt">
+            We are a residential interior design firm located in <br />
+            Portland. Our boutique-studio offers more than
+          </p>
+          <ul class="footer__icons">
+            <li class="footer__icon">
+              <i class="fa-brands fa-twitter"></i>
+            </li>
+            <li class="footer__icon">
+              <i class="fa-brands fa-facebook-f"></i>
+            </li>
+            <li class="footer__icon">
+              <i class="fa-brands fa-tiktok"></i>
+            </li>
+            <li class="footer__icon">
+              <i class="fa-brands fa-instagram"></i>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h6 class="footer__title">Services</h6>
+          <p class="footer__text">Bonus program</p>
+          <p class="footer__text">Gift cards</p>
+          <p class="footer__text">Credit and payment</p>
+          <p class="footer__text">Service contracts</p>
+          <p class="footer__text">Non-cash account</p>
+          <p class="footer__text">Payment</p>
+        </div>
+        <div class="footer__col">
+          <h6 class="footer__title">Assistance to the buyer</h6>
+          <p class="footer__text">Find an order</p>
+          <p class="footer__text">Terms of delivery</p>
+          <p class="footer__text">Exchange and return of goods</p>
+          <p class="footer__text">Guarantee</p>
+          <p class="footer__text">Frequently asked questions</p>
+          <p class="footer__text">Terms of use of the site</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="shopping.js"></script>
+</body>
+
+</html>

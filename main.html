@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codai_Main</title>
+    <!--  -->
+    <link rel="shortcut icon" href="./assets/logo.jpg" type="image/x-icon" />
+
+
+    <!-- (fontawesome link) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- (end fontawesome link) -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header__wrapper">
+                <button class="logo_m" popovertarget="logo-modal">
+                    <img src="/assets/logo.jpg" alt="logo" class="logo">
+                </button>
+                <div class="logo__big" popover="" id="logo-modal">
+                    <img src="/assets/logo.jpg" alt="logo big" class="logo-big">
+
+                </div>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" class="header__search" placeholder="Search">
+                </div>
+                <nav>
+                    <ul class="header__list ">
+                        <li class="header__item h">
+                            <a href="main.html" class="header__link">Home</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="shop.html" class="header__link l">Shop</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#footer" class="header__link l1">Footer</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#sales" class="header__link l2">Sales</a>
+                        </li>
+                    </ul>
+                    <ul class="header__icons">
+
+                        <li class="header__icon">
+                            <a href="shop.html" class="header__link-shop"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </li>
+                        <li class="header__icon">
+                            <button class="pp" popovertarget="profil"><i class="fa-solid fa-user"></i></button>
+                        </li>
+                        <div popover="" id="profil" class="profile">
+                            <h2 class="profile__title">Your Profile</h2>
+                            <h3 class="profile__username">Email: </h3>
+                            <h3 class="profile__password">Password: </h3>
+                            <a href="./index.html" class="logout">Log out</a>
+                            <a href="./index.html" class="clear">Clear</a>
+                            <button class="admin">Admin panel</button>
+                            <p class="admin_err"></p>
+                            <i class="fa-solid fa-x" popovertarget="profil"></i>
+                            
+                        </div>
+                    </ul>
+                </nav>
+                <button class="btnn">
+                    <i class="fa-solid fa-moon a"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!--  -->
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero__wrapper">
+                    <div class="hero__left">
+                        <h4 class="pro">Pro.Codai.</h4>
+                        <h1 class="hero__title">IPhone 14 <span class="hero__span">Pro</span></h1>
+                        <p class="hero__txt">Created to change everything for the better. For everyone</p>
+                        <a href="shop.html"> <button class="hero__btn">Shop now</button></a>
+                    </div>
+                    <div class="hero__right">
+                        <img src="/assets/hero-phone.png" alt="" class="hero__img">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  -->
+        <section class="products">
+            <div class="container">
+                <div class="products__wrapper">
+                    <div class="products__playstation">
+                        <img src="./assets/playstation5.png" alt="playstation-image" class="playstation-img">
+                        <div class="products__box">
+                            <h2 class="products__play-title products__title">Playstation 5</h2>
+                            <p class="products__play-txt">Incredibly powerful CPUs, GPUs, and an SSD with <br>integrated
+                                I/O
+                                will
+                                redefine your PlayStation <br>experience.</p>
+                        </div>
+                    </div>
+                    <div class="products__airpods air">
+                        <img src="./assets/airpods.png" alt="airpods-image" class="airpods-img">
+
+                        <div class="products__box">
+                            <h2 class="products__air-title products__title">Apple <br>AirPods <br><span
+                                    class="products__air-span">Max</span></h2>
+                            <p class="products__air-txt">Computational audio. <br>Listen, it's powerful</p>
+                        </div>
+                    </div>
+                    <div class="products__vision">
+                        <img src="./assets/vision.png" alt="vision-image" class="vision-img">
+
+                        <div class="products__box">
+                            <h2 class="products__vision-title ">Apple <br>Vision <span
+                                    class="products__vision-span">Pro</span></h2>
+                            <p class="products__vision-txt">An immersive way to <br>experience <br>entertainment</p>
+                        </div>
+                    </div>
+                    <div class="products__macbook">
+                        <div class="products__box">
+                            <h2 class="products__mac-title products__title">Macbook <br><span
+                                    class="products__mac-span">Air</span></h2>
+                            <p class="products__mac-txt">The new 15‑inch MacBook Air makes room for more <br>of what you
+                                love with a spacious Liquid Retina <br>display.</p>
+                            <a href="shop.html"><button class="btn">Shop Now</button></a>
+                        </div>
+                        <img src="./assets/MacBook Pro 14.svg" alt="macbook-image" class="macbook-img">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  -->
+        <section class="cards">
+            <div class="container">
+                <ul class="cards__wrapper">
+                    <li class="card">
+                        <img src="./assets/Iphone 14 pro 1 (7).png" alt="iphone">
+                        <h3>Apple iPhone 14 Pro Max 128GB Deep Purple </h3>
+                        <p class="narx">$900</p>
+                        <a href="shop.html"><button class="card__btn">Buy Now</button></a>
+                    </li>
+
+                    <li class="card">
+
+
+                        <img src="./assets/Iphone 14 pro 1 (8).png" alt="iphone">
+                        <h3>Blackmagic Pocket Cinema Camera 6k</h3>
+                        <p class="narx">$2535</p>
+                        <a href="shop.html"><button class="card__btn">Buy Now</button></a>
+                    </li>
+
+                    <li class="card">
+
+
+                        <img src="./assets/Iphone 14 pro 1 (9).png" alt="iphone">
+                        <h3>Apple Watch Series 9 GPS 41mm Starlight Aluminium </h3>
+                        <p class="narx">$390</p>
+                        <a href="shop.html"><button class="card__btn">Buy Now</button></a>
+                    </li>
+                    <li class="card">
+
+
+                        <img src="./assets/Iphone 14 pro 1 (10).png" alt="iphone">
+                        <h3>AirPods Max Silver
+                            Starlight Aluminium </h3>
+                        <p class="narx">$549</p>
+                        <a href="shop.html"><button class="card__btn">Buy Now</button></a>
+                    </li>
+
+                    <li class="card">
+
+
+                        <img src="./assets/Iphone 14 pro 1 (11).png" alt="iphone">
+                        <h3>Samsung Galaxy Watch6 Classic 47mm Black</h3>
+                        <p class="narx">$369</p>
+                        <a href="shop.html"><button class="card__btn">Buy Now</button></a>
+                    </li>
+
+                    <li class="card">
+
+
+                        <img src="./assets/Iphone 14 pro 1 (12).png" alt="iphone">
+                        <h3>Galaxy Z Fold5 Unlocked | 256GB | Phantom Black</h3>
+                        <p class="narx">$1799</p>
+                        <a href="shop.html"><button class="card__btn">Buy Now</button></a>
+                    </li>
+
+                    <li class="card">
+
+
+                        <img src="./assets/Iphone 14 pro 1 (13).png" alt="iphone">
+                        <h3>Galaxy Buds FE
+                            Graphite</h3>
+                        <p class="narx">$99.99</p>
+                        <a href="shop.html"><button class="card__btn">Buy Now</button></a>
+                    </li>
+
+                    <li class="card">
+
+
+                        <img src="./assets/Iphone 14 pro 1 (14).png" alt="iphone">
+                        <h3>Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021</h3>
+                        <p class="narx">$398</p>
+                        <a href="shop.html"><button class="card__btn">Buy Now</button></a>
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </section>
+        <!--  -->
+        <section class="popular">
+            <div class="container">
+                <ul class="popular__wrapper">
+
+                    <li class="popular__item">
+                        <img src="./assets/airpods_iwatch.png" alt="airpods and iwatch" class="popular__img">
+                        <h2 class="popular__title">Popular Products</h2>
+                        <p class="popular__txt">iPad combines a magnificent 10.2-inch Retina display, incredible
+                            performance, multitasking and ease of use.</p>
+                        <a href="shop.html"><button class="btn">Shop Now</button></a>
+
+                    </li>
+                    <li class="popular__item">
+                        <img src="./assets/ipads.png" alt="airpods and iwatch" class="popular__img">
+                        <h2 class="popular__title">Ipad Pro</h2>
+                        <p class="popular__txt">iPad combines a magnificent 10.2-inch Retina display, incredible
+                            performance, multitasking and ease of use.</p>
+                        <a href="shop.html"><button class="btn">Shop Now</button></a>
+
+
+                    </li>
+                    <li class="popular__item">
+                        <img src="./assets/samsung-g.png" alt="airpods and iwatch" class="popular__img">
+                        <h2 class="popular__title">Samsung Galaxy</h2>
+                        <p class="popular__txt">iPad combines a magnificent 10.2-inch Retina display, incredible
+                            performance, multitasking and ease of use.</p>
+                        <a href="shop.html"><button class="btn">Shop Now</button></a>
+
+
+                    </li>
+                    <li class="popular__item">
+                        <img src="./assets/macbook-popular.png" alt="airpods and iwatch" class="popular__img">
+                        <h2 class="popular__title">Macbook Pro</h2>
+                        <p class="popular__txt">iPad combines a magnificent 10.2-inch Retina display, incredible
+                            performance, multitasking and ease of use.</p>
+                        <a href="shop.html"><button class="btn">Shop Now</button></a>
+
+
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!--  -->
+        <section class="discounts">
+            <div class="container">
+                <div class="discounts__wrapper">
+                    <h3 class="discounts__title">
+                        Discounts up to -50%
+                    </h3>
+                    <ul class="discounts__list">
+                        <li class="card">
+                            <img src="./assets/Iphone 14 pro 1 (7).png" alt="iphone">
+                            <h3>Apple iPhone 14 Pro Max 128GB Deep Purple </h3>
+                            <p class="narx">$900</p>
+                            <a href="shop.html"><button class="card__btn">Buy Now</button></a>
+                        </li>
+                        <li class="card">
+                            <img src="./assets/Iphone 14 pro 1 (10).png" alt="iphone">
+                            <h3>AirPods Max Silver
+                                Starlight Aluminium </h3>
+                            <p class="narx">$549</p>
+                            <a href="shop.html"><button class="card__btn">Buy Now</button></a>
+                        </li>
+                        <li class="card">
+                            <img src="./assets/Iphone 14 pro 1 (9).png" alt="iphone">
+                            <h3>Apple Watch Series 9 GPS 41mm Starlight Aluminium </h3>
+                            <p class="narx">$390</p>
+                            <a href="shop.html"><button class="card__btn">Buy Now</button></a>
+                        </li>
+                        <li class="card">
+
+
+                            <img src="./assets/Iphone 14 pro 1 (14).png" alt="iphone">
+                            <h3>Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021</h3>
+                            <p class="narx">$398</p>
+                            <a href="shop.html"><button class="card__btn">Buy Now</button></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--  -->
+        <section class="sale" id="sales">
+            <div class="conatiner">
+                <div class="sale__wrapper">
+                    <h2 class="sale__title">Big Summer <span class="sale__span">Sale</span></h2>
+                    <p class="sale__txt">Commodo fames vitae vitae leo mauris in. Eu consequat.</p>
+                    <a href="shop.html"> <button class="sale__btn">Shop now</button></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--  -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__col">
+                    <img src="/assets/logo.jpg" alt="logo" class="logo">
+                    <p class="footer__txt">
+                        We are a residential interior design firm located in <br> Portland. Our boutique-studio offers
+                        more
+                        than
+                    </p>
+                    <ul class="footer__icons">
+                        <li class="footer__icon">
+                            <i class="fa-brands fa-twitter"></i>
+                        </li>
+                        <li class="footer__icon">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </li>
+                        <li class="footer__icon">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </li>
+                        <li class="footer__icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h6 class="footer__title">
+                        Services
+                    </h6>
+                    <p class="footer__text">Bonus program</p>
+                    <p class="footer__text">Gift cards</p>
+                    <p class="footer__text">Credit and payment</p>
+                    <p class="footer__text">Service contracts</p>
+                    <p class="footer__text">Non-cash account</p>
+                    <p class="footer__text">Payment</p>
+                </div>
+                <div class="footer__col">
+                    <h6 class="footer__title">
+                        Assistance to the buyer
+                    </h6>
+                    <p class="footer__text">Find an order</p>
+                    <p class="footer__text">Terms of delivery</p>
+                    <p class="footer__text">Exchange and return of goods</p>
+                    <p class="footer__text">Guarantee</p>
+                    <p class="footer__text">Frequently asked questions</p>
+                    <p class="footer__text">Terms of use of the site</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
