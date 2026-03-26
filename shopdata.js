@@ -55,13 +55,16 @@ if (productsget && productsget.length > 9) {
 let urlget = localStorage.getItem('url')
 let nameeget = localStorage.getItem('name')
 let priceget = localStorage.getItem('price')
-if (urlget != products[products.length - 1].img || nameeget != products[products.length - 1].name || priceget != products[products.length - 1].price) {
-    products.push(
-        {
-            img: urlget,
-            name: nameeget,
-            price: priceget
-        }
-    )
-    localStorage.setItem('products', JSON.stringify(products))
+if (urlget && nameeget && priceget) {
+    if (urlget != products[products.length - 1].img || nameeget != products[products.length - 1].name || priceget != products[products.length - 1].price) {
+        products.push(
+            {
+                img: urlget,
+                name: nameeget,
+                price: priceget
+            }
+        )
+        localStorage.setItem('products', JSON.stringify(products))
+    }
 }
+
