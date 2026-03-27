@@ -17,21 +17,30 @@ const apply = document.querySelector(".apply");
 let subtotal = document.querySelector(".subtotal__price");
 let percent = document.querySelector(".percent__price");
 let totalPrice = document.querySelector(".total__price");
-let p1 = 1399,
-  p2 = 549,
-  p3 = 399;
+let p = [1399, 549, 399]
+
+let urlgeted = localStorage.getItem("url")
+let namegeted = localStorage.getItem("name")
+let pricegeted = localStorage.getItem("price")
+
+
+
 function hisobla() {
   const subtotalValue =
-    Number(number.textContent) * p1 +
-    Number(number2.textContent) * p2 +
-    Number(number3.textContent) * p3;
+    Number(number.textContent) * p[0] +
+    Number(number2.textContent) * p[1] +
+    Number(number3.textContent) * p[2];
 
   const percentValue = subtotalValue * 0.02;
   const totalValue = subtotalValue + percentValue;
 
   subtotal.textContent = subtotalValue + "$";
-  percent.textContent = percentValue.toFixed(0) + "$";
-  totalPrice.textContent = totalValue.toFixed(0) + "$";
+  percent.textContent = percentValue + "$";
+  totalPrice.textContent = totalValue + "$";
+
+  localStorage.setItem('subtotal', subtotalValue)
+  localStorage.setItem('percent', percentValue)
+  localStorage.setItem('total', totalValue)
 }
 
 apply.addEventListener("click", function () {

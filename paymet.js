@@ -9,6 +9,14 @@ let error = document.querySelector(".error");
 let addresserror = document.querySelector(".address__error");
 let telnomererror = document.querySelector(".telnomer__error");
 
+let paymet__subtotal = document.querySelector(".payment__subtotal-price")
+let paymet__tax = document.querySelector(".payment__tax-price")
+let paymet__price = document.querySelector(".payment__total-price")
+
+paymet__subtotal.textContent = "$" + localStorage.getItem("subtotal")
+paymet__tax.textContent = "$" + localStorage.getItem("percent")
+paymet__price.textContent = "$" + localStorage.getItem('total')
+
 pay.addEventListener("click", function () {
     error.textContent = "";
     addresserror.textContent = "";
