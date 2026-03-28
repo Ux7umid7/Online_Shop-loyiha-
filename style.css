@@ -897,21 +897,21 @@ button:active {
 }
 
 .logout {
-    background-color: #2a7ae4;
-    color: black;
+    background-color: orange;
+    color: white;
     padding: 5px 15px;
     border-radius: 15px;
 
 }
 .clear{
-    background-color: #2a7ae4;
-    color: black;
+    background-color: red;
+    color: white;
     padding: 5px 15px;
     border-radius: 15px;
 }
 .admin {
-    background-color: black;
-    color: #2a7ae4;
+    background-color: yellow;
+    color: black;
     padding: 7px 15px;
     border-radius: 15px;
 
