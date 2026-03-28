@@ -44,17 +44,29 @@ search.addEventListener('input', () => {
     render(filtered)
 })
 
+function addToCart(index) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || []
+
+    cart.push(products[index])
+
+    localStorage.setItem("cart", JSON.stringify(cart))
+
+    window.location.href = "./shopping.html"
+}
+
 
 function render(array) {
-    array.forEach(el => {
+    ul.innerHTML = ''
+    array.forEach((el, index) => {
         ul.innerHTML += `
         <div class="card">
             <img src="${el.img}">
             <h3>${el.name}</h3>
             <p class="narx">$${el.price}</p>
-            <a href="./shopping.html"><button>Buy Now</button></a>
+            <button onclick="addToCart(${index})">Buy Now</button>
         </div>
         `
     });
 }
+
 render(products)
