@@ -67,6 +67,7 @@ pay.addEventListener("click", function () {
 
     error.textContent = "Payment Successful!";
     error.style.color = "green";
+    localStorage.setItem("cart", JSON.stringify([]))
 
     setTimeout(function () {
         window.location.href = "./buyurtma.html";

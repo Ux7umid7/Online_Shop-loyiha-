@@ -123,7 +123,32 @@ nav {
 }
 
 .store__left {
-  flex: 2;
+
+  padding-bottom: 20px;
+
+  ul {
+    overflow-y: scroll;
+    margin-bottom: 20px;
+    height: 400px;
+  }
+
+  ul::-webkit-scrollbar {
+    display: block;
+  }
+}
+
+.add-cart {
+  color: white;
+  background-color: #2a7ae4;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 20px;
+  height: 10px;
+  transition: 0.3s linear;
+}
+
+.add-cart:hover {
+  background-color: #1a5ac7;
 }
 
 .store__txt {
@@ -177,6 +202,7 @@ hr {
 
 .store__right {
   flex: 1;
+  width: 530px;
 }
 
 .order__box {

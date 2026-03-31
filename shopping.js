@@ -24,12 +24,12 @@ let namegeted = localStorage.getItem("name")
 let pricegeted = localStorage.getItem("price")
 
 let cart = JSON.parse(localStorage.getItem("cart")) || []
-let container = document.querySelector(".store__left ul")
+let ul = document.querySelector(".store__left ul")
 
-container.innerHTML = ""
+ul.innerHTML = ""
 
 cart.forEach((item, index) => {
-  container.innerHTML += `
+  ul.innerHTML += `
     <li class="store__cart">
         <img src="${item.img}" class="product__img" />
         <p class="cart__info">${item.name}</p>
@@ -76,8 +76,8 @@ function hisobla() {
   percent.textContent = percentValue + "$"
   totalPrice.textContent = totalValue + "$"
   localStorage.setItem('subtotal', subtotalValue)
-    localStorage.setItem('percent', percentValue)
-    localStorage.setItem('total', totalValue)
+  localStorage.setItem('percent', percentValue)
+  localStorage.setItem('total', totalValue)
 }
 
 apply.addEventListener("click", function () {
@@ -96,6 +96,7 @@ apply.addEventListener("click", function () {
     carderror.textContent = "Click Checkout!";
     carderror.style.color = "green";
     chek.addEventListener("click", function () {
+      ul.textContent = ""
       window.location.href = "./paymet.html";
     });
   }
