@@ -72,12 +72,13 @@ function hisobla() {
   let percentValue = subtotalValue * 0.02
   let totalValue = subtotalValue + percentValue
 
-  subtotal.textContent = subtotalValue + "$"
-  percent.textContent = percentValue + "$"
-  totalPrice.textContent = totalValue + "$"
-  localStorage.setItem('subtotal', subtotalValue)
-  localStorage.setItem('percent', percentValue)
-  localStorage.setItem('total', totalValue)
+  Math.floor(subtotal).textContent = subtotalValue + "$"
+  Math.floor(percent).textContent = percentValue + "$"
+  Math.floor(totalPrice).textContent = totalValue + "$"
+
+  localStorage.setItem('subtotal', Math.floor(subtotalValue))
+  localStorage.setItem('percent', Math.floor(percentValue))
+  localStorage.setItem('total', Math.floor(totalValue))
 }
 
 apply.addEventListener("click", function () {
