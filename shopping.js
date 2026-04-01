@@ -63,22 +63,26 @@ function decrease(i) {
 
 
 function hisobla() {
-  let subtotalValue = 0
+  let subtotal1 = 0
 
   cart.forEach((item, i) => {
-    subtotalValue += item.price * quantities[i]
+    subtotal1 += item.price * quantities[i]
   })
 
-  let percentValue = subtotalValue * 0.02
-  let totalValue = subtotalValue + percentValue
+  let percent1 = subtotal1 * 0.02
+  let total1 = subtotal1 + percent1
 
-  Math.floor(subtotal).textContent = subtotalValue + "$"
-  Math.floor(percent).textContent = percentValue + "$"
-  Math.floor(totalPrice).textContent = totalValue + "$"
+  let subtotalValue = Math.floor(subtotal1)
+  let percentValue = Math.floor(percent1)
+  let totalValue = Math.floor(total1)
 
-  localStorage.setItem('subtotal', Math.floor(subtotalValue))
-  localStorage.setItem('percent', Math.floor(percentValue))
-  localStorage.setItem('total', Math.floor(totalValue))
+  subtotal.textContent = subtotalValue + "$"
+  percent.textContent = percentValue + "$"
+  totalPrice.textContent = totalValue + "$"
+
+  localStorage.setItem('subtotal', subtotalValue)
+  localStorage.setItem('percent', percentValue)
+  localStorage.setItem('total', totalValue)
 }
 
 apply.addEventListener("click", function () {
