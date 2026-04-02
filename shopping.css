@@ -8,6 +8,11 @@
   font-family: "Inter", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+
+}
+
 header {
   position: sticky;
   top: 0px;

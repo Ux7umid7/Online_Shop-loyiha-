@@ -16,6 +16,11 @@ header {
     backdrop-filter: blur(12px);
 }
 
+html {
+    scroll-behavior: smooth;
+
+}
+
 button,
 a {
     cursor: pointer;

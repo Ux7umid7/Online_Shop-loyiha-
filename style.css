@@ -27,6 +27,7 @@ a {
 
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 
@@ -590,7 +591,7 @@ nav {
     font-weight: 500;
     font-style: Medium;
     font-size: 15px;
-
+    
     line-height: 24px;
     letter-spacing: 0%;
     text-align: center;
@@ -919,6 +920,7 @@ button:active {
 
     border: none;
 }
+
 
 @media screen and (max-width: 1024px) {
     header {

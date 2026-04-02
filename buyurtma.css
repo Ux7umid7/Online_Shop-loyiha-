@@ -12,6 +12,11 @@ a {
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+
+}
+
 a,
 button {
     cursor: pointer;

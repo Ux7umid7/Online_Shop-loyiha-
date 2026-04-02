@@ -11,6 +11,11 @@
     outline: none;
 }
 
+html {
+    scroll-behavior: smooth;
+
+}
+
 body {
     background: #f5f5f5;
 }
