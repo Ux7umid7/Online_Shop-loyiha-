@@ -338,7 +338,7 @@ nav {
     border: none;
     height: max-content;
     overflow: hidden;
-    
+
 }
 
 .profile::backdrop {
@@ -903,12 +903,14 @@ button:active {
     border-radius: 15px;
 
 }
-.clear{
+
+.clear {
     background-color: red;
     color: white;
     padding: 5px 15px;
     border-radius: 15px;
 }
+
 .admin {
     background-color: yellow;
     color: black;
@@ -1020,6 +1022,10 @@ button:active {
         height: auto;
     }
 
+    .admin {
+        margin-top: 10px;
+    }
+
     .hero__img {
         position: static;
         transform: scale(1);
@@ -1036,6 +1042,7 @@ button:active {
     .popular__item {
         width: 300px;
         text-align: center;
+        margin: 0 auto;
     }
 
     .popular__item:nth-child(3) {
