@@ -90,3 +90,4 @@ apply.addEventListener("click", function () {
     });
   }
 });
+hisobla()
