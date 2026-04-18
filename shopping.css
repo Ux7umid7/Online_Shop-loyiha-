@@ -301,6 +301,10 @@ footer {
   gap: 30px;
 }
 
+.footer__icons li a {
+  color: #636363;
+}
+
 .footer__text {
   margin: 8px 0;
   font-family: Inter;

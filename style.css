@@ -50,6 +50,9 @@ header {
     height: 60px;
     border-radius: 50%;
 }
+.footer__icons li a {
+    color: #636363bd;
+}
 
 .header__wrapper {
     padding: 20px 0px;
@@ -891,8 +894,19 @@ button:active {
 
 .header__link-shop {
     color: #636363bd;
+    position: relative;
 }
-
+.cart__num{
+    font-size: 14px;
+    position: absolute;
+    top: -5px;
+    right: -6px;
+    background-color: blue;
+    color: #fff;
+    border-radius: 50%;
+    padding: 1px 5px;
+    
+}
 .header__link:hover {
     color: black;
 }

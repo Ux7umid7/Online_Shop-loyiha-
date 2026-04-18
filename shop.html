@@ -20,9 +20,9 @@
     <header>
         <div class="container">
             <div class="header__wrapper">
-                <button class="logo_m" popovertarget="logo-modal">
-                    <img src="/assets/logo.jpg" alt="logo" class="logo">
-                </button>
+                <a href="/main.html">
+                    <img src="/assets/logo.jpg" alt="logo" class="logo" />
+                </a>
                 <div class="logo__big" popover="" id="logo-modal">
                     <img src="/assets/logo.jpg" alt="logo big" class="logo-big">
 
@@ -47,7 +47,8 @@
                     <ul class="header__icons">
 
                         <li class="header__icon">
-                            <a href="shop.html" class="header__link-shop"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a class="header__link-shop"><i class="fa-solid fa-cart-shopping"></i><span
+                                    class="cart__num"></span></a>
                         </li>
                         <li class="header__icon">
                             <button class="pp" popovertarget="profil"><i class="fa-solid fa-user"></i></button>
@@ -69,6 +70,29 @@
     </header>
     <!--  -->
     <div class="container">
+        <div class="sort">
+            <form class="form">
+                <label for="samsung">
+                    <input type="checkbox" id="samsung">
+                    Samsung
+                </label>
+                <hr>
+                <label for="apple">
+                    <input type="checkbox" id="apple">
+                    Apple
+                </label>
+                <hr>
+                <label for="cheap">
+                    <input type="checkbox" id="cheap">
+                    Cheap
+                </label>
+                <hr>
+                <label for="ex">
+                    <input type="checkbox" id="ex">
+                    Expensive
+                </label>
+            </form>
+        </div>
         <div class="products">
 
         </div>
@@ -85,12 +109,28 @@
                     Our boutique-studio offers more than
                 </p>
 
-                <div class="footer_iconlar">
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-tiktok"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                </div>
+                <ul class="footer_iconlar">
+                    <li class="footer__icon">
+                        <a href="https://x.com/">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="footer__icon">
+                        <a href="https://www.facebook.com/">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="footer__icon">
+                        <a href="https://www.tiktok.com/">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </li>
+                    <li class="footer__icon">
+                        <a href="https://www.instagram.com/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
 
             <div class="footer_ustun">
@@ -115,7 +155,6 @@
 
         </div>
     </footer>
-
 
 
     <script src="shopdata.js"></script>

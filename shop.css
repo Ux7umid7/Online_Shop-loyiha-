@@ -177,6 +177,7 @@ nav {
 
 .header__link-shop {
     color: #636363bd;
+    position: relative;
 }
 
 .header__link:hover {
@@ -246,6 +247,17 @@ nav {
     margin-bottom: 15px;
 }
 
+.cart__num {
+    font-size: 14px;
+    position: absolute;
+    top: -5px;
+    right: -6px;
+    background-color: blue;
+    color: #fff;
+    border-radius: 50%;
+    padding: 1px 5px;
+}
+
 .card h3 {
     font-size: 14px;
     margin-bottom: 10px;
@@ -258,34 +270,35 @@ nav {
     margin-bottom: 15px;
 }
 
-.card button {
+.card a {
     background: black;
     color: white;
     width: 100%;
     height: 45px;
     border-radius: 8px;
     transition: 0.3s;
+    padding: 10px 40px;
 }
 
-.card button:hover {
+.card a:hover {
     background: #333;
 }
 
-
-
-.like {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 18px;
-    color: #aaa;
-    cursor: pointer;
-    transition: 0.3s;
+.form {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  width: max-content;
 }
 
-.like.active {
-    color: red;
+.form label {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
 }
+
 
 
 
@@ -327,6 +340,10 @@ footer {
 .footer_iconlar i {
     cursor: pointer;
     transition: 0.3s;
+}
+
+.footer_iconlar li a {
+    color: #636363bd;
 }
 
 .footer_iconlar i:hover {
@@ -384,7 +401,7 @@ footer {
     }
 
     .products {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .footer_quti {

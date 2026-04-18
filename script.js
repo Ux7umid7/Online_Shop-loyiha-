@@ -1,6 +1,5 @@
 let btn = document.querySelector('.btnn')
 let faSolid = document.querySelector('.a')
-// let icon = document.querySelector('.header__icons')
 let link = document.querySelector('a')
 let links = document.querySelector('.l')
 let links2 = document.querySelector('.l1')
@@ -24,6 +23,9 @@ let clear = document.querySelector('.clear')
 let email = document.querySelector(".profile__username")
 let password = document.querySelector(".profile__password")
 let profil = document.querySelector(".profile")
+let cart_num = document.querySelector(".cart__num")
+let cartget = JSON.parse(localStorage.getItem("cart")) || []
+let cart_icon = document.querySelector(".header__link-shop")
 
 const savedEmail = localStorage.getItem("userEmail");
 const savedPassword = localStorage.getItem("userPassword");
@@ -31,6 +33,19 @@ const savedPassword = localStorage.getItem("userPassword");
 email.textContent += savedEmail
 password.textContent += savedPassword
 
+cart_num.textContent = cartget.length
+if (cartget.length <= 0) {
+    cart_num.style.backgroundColor = "red"
+} else {
+    cart_num.style.backgroundColor = "blue"
+}
+cart_icon.addEventListener("click", () => {
+    if (cartget.length <= 0) {
+        window.location.href = "/shop.html"
+    } else {
+        window.location.href = "/shopping.html"
+    }
+})
 admin.addEventListener('click', () => {
     if (savedPassword == '123456') {
         window.location.href = './admin.html'
@@ -39,7 +54,7 @@ admin.addEventListener('click', () => {
         aerr.textContent = `admin parolingiz yo'q`
     }
 })
-clear.addEventListener('click',function(){
+clear.addEventListener('click', function () {
     localStorage.clear()
 })
 

@@ -1,70 +1,1396 @@
-let products = [
-    {
-        img: "./assets/Iphone 14 pro 1 (1).png",
-        name: "Apple iPhone 14 Pro 512GB Gold",
-        price: 1437
+let samsungProducts = [
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/uz_ru/sm-a376ezagsoz/gallery/uz-ru-galaxy-a37-5g-sm-a376-sm-a376ezagsoz-551732356?$Q90_1248_936_F_PNG$",
+    name: "Samsung Galaxy A37 5G",
+    price: 549,
+    details: {
+      screen: "6.7-inch Super AMOLED, 120Hz, FHD+",
+      cpu: "Exynos 1480",
+      gpu: "Xclipse 530",
+      camera: "50MP triple, 4K video",
+      extras: ["5G", "Dolby Atmos", "5000mAh battery"],
     },
-    {
-        img: "./assets/Iphone 14 pro 1 (2).png",
-        name: "Apple iPhone 11 128GB White",
-        price: 510
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/uk/sm-a576bdbheub/gallery/uk-galaxy-a57-5g-sm-a576-sm-a576bdbheub-551708623?$Q90_1248_936_F_PNG$",
+    name: "Samsung Galaxy A57 5G",
+    price: 599,
+    details: {
+      screen: "6.7-inch Super AMOLED+, 120Hz, HDR10+",
+      cpu: "Exynos 1680",
+      gpu: "Xclipse 550",
+      camera: "50MP triple, OIS",
+      extras: ["5G", "45W fast charging", "5000mAh battery"],
     },
-    {
-        img: "./assets/Iphone 14 pro 1 (3).png",
-        name: "Apple iPhone 11 128GB White",
-        price: 550
+  },
+  {
+    img: "https://www.dxomark.com/wp-content/uploads/medias/post-191242/Samsung-S26-Ultra-png.png",
+    name: "Samsung Galaxy S26 Ultra",
+    price: 1499,
+    details: {
+      screen: "6.9-inch Dynamic AMOLED 2X, QHD+, 120Hz",
+      cpu: "Snapdragon 8 Elite Gen 5",
+      gpu: "Adreno 840",
+      camera: "200MP quad, 8K video",
+      extras: ["S Pen", "IP68", "5000mAh battery"],
     },
-    {
-        img: "./assets/Iphone 14 pro 1 (4).png",
-        name: "Apple iPhone 14 Pro 1TB Gold",
-        price: 1499
+  },
+  {
+    img: "https://media.cnn.com/api/v1/images/stellar/prod/new-project-13-20260225182554866.jpg?q=h_720,w_1280,c_fill,c_auto,g_auto,c_auto_pad,ar_16:9",
+    name: "Samsung Galaxy S26+",
+    price: 1199,
+    details: {
+      screen: "6.7-inch Dynamic AMOLED 2X, FHD+, 120Hz",
+      cpu: "Snapdragon 8 Elite Gen 5",
+      gpu: "Adreno 840",
+      camera: "50MP triple, 4K video",
+      extras: ["Wireless charging", "4900mAh battery"],
     },
-    {
-        img: "./assets/Iphone 14 pro 1 (5).png",
-        name: "Apple iPhone 14 Pro 1TB Gold",
-        price: 1399
+  },
+  {
+    img: "https://asset.openshop.uz/uploads/products/photos/202603/uYKyTzOY1PSi0d6gCh1a3F6Wx5rgbKDw.jpg",
+    name: "Samsung Galaxy S26",
+    price: 999,
+    details: {
+      screen: "6.3-inch Dynamic AMOLED 2X, FHD+, 120Hz",
+      cpu: "Exynos 2600",
+      gpu: "Xclipse 960",
+      camera: "50MP triple",
+      extras: ["HDR10+", "4300mAh battery"],
     },
-    {
-        img: "./assets/Iphone 14 pro 1 (6).png",
-        name: "Apple iPhone 14 Pro 128GB Deep Purple",
-        price: 1600
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/za/sm-a176bzkeafa/gallery/za-galaxy-a17-5g-sm-a176-sm-a176bzkeafa-549239091?$Q90_1248_936_F_PNG$",
+    name: "Samsung Galaxy A17",
+    price: 349,
+    details: {
+      screen: "6.7-inch Super AMOLED, 90Hz",
+      cpu: "Exynos 1330",
+      gpu: "Mali-G68",
+      camera: "50MP dual",
+      extras: ["5000mAh battery", "25W charging"],
     },
-    {
-        img: "./assets/Iphone 14 pro 1 (7).png",
-        name: "Apple iPhone 13 mini 128GB Pink",
-        price: 850
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/assets/us/smartphones/galaxy-s25-fe/08252025/Galaxy_S25_FE-MLP-FT12-1-Design_color_Navy-MO.jpg?$720_N_JPG$",
+    name: "Samsung Galaxy S25 FE",
+    price: 749,
+    details: {
+      screen: "6.7-inch Dynamic AMOLED 2X, 120Hz",
+      cpu: "Exynos 2400",
+      gpu: "Xclipse 940",
+      camera: "50MP triple",
+      extras: ["4900mAh battery", "45W charging"],
     },
-    {
-        img: "./assets/Iphone 14 pro 1 (8).png",
-        name: "Camera Space Black",
-        price: 1399
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/pk/sm-a075flvdpkd/gallery/pk-galaxy-a07-sm-a075-sm-a075flvdpkd-548696143?$Q90_1248_936_F_PNG$",
+    name: "Samsung Galaxy A07",
+    price: 229,
+    details: {
+      screen: "6.7-inch LCD, 90Hz",
+      cpu: "MediaTek Helio G99",
+      gpu: "Mali-G57",
+      camera: "50MP single",
+      extras: ["5000mAh battery", "25W charging"],
     },
-    {
-        img: "./assets/Iphone 14 pro 1 (9).png",
-        name: "Apple iWatch Pro Silver",
-        price: 1399
-    }
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/levant/sm-a366bzapmea/gallery/levant-galaxy-a36-5g-sm-a366-sm-a366bzapmea-545293261?$Q90_1248_936_F_PNG$",
+    name: "Samsung Galaxy A36 5G",
+    price: 449,
+    details: {
+      screen: "6.7-inch Super AMOLED, 120Hz",
+      cpu: "Snapdragon 6 Gen 3",
+      gpu: "Adreno 710",
+      camera: "50MP triple",
+      extras: ["5000mAh battery", "5G support"],
+    },
+  },
+  {
+    img: "https://www.phoneplacekenya.com/wp-content/uploads/2024/08/Samsung-Galaxy-A361.jpg",
+    name: "Samsung Galaxy A56 5G",
+    price: 499,
+    details: {
+      screen: "6.7-inch Super AMOLED, 120Hz",
+      cpu: "Exynos 1580",
+      gpu: "Xclipse 540",
+      camera: "50MP triple",
+      extras: ["5000mAh battery", "45W charging"],
+    },
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/levant/sm-a266bzwjmea/gallery/levant-galaxy-a26-5g-sm-a266-sm-a266bzwjmea-545408661?$Q90_1248_936_F_PNG$",
+    name: "Samsung Galaxy A26 5G",
+    price: 399,
+    details: {
+      screen: "6.7-inch Super AMOLED, 120Hz",
+      cpu: "Exynos 1380",
+      gpu: "Mali-G68",
+      camera: "50MP triple",
+      extras: ["5000mAh battery", "25W charging"],
+    },
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/ae/sm-a065fzdhmea/gallery/ae-galaxy-a06-sm-a065-520647-sm-a065fzdhmea-543699714?$Q90_1248_936_F_PNG$",
+    name: "Samsung Galaxy A06",
+    price: 179,
+    details: {
+      screen: "6.7-inch LCD, 60Hz",
+      cpu: "MediaTek Helio G85",
+      gpu: "Mali-G52",
+      camera: "50MP single",
+      extras: ["5000mAh battery", "15W charging"],
+    },
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/hk_en/sm-a1660zaitgy/gallery/hk-en-galaxy-a16-5g-sm-a166-sm-a1660zaitgy-thumb-544073529",
+    name: "Samsung Galaxy A16",
+    price: 279,
+    details: {
+      screen: "6.7-inch Super AMOLED, 90Hz",
+      cpu: "Dimensity 6300",
+      gpu: "Mali-G68",
+      camera: "50MP dual",
+      extras: ["5000mAh battery", "25W charging"],
+    },
+  },
+  {
+    img: "https://api.samsungmobilepress.com/api/v1/file/9A8B0C5E7AE223941FE931B23B810EB4B0889FB378F9B1FA94096036C43DE1D9CBD04954550FBC1C771FCC793F100E9B5F5CA2F530F87B9FD4380D9EADEC2F54798273B45EB93A9033A5AD11EE2772F26A4BAD909A7CC2D855BCEDD00CD694A0D3D74A1A1DFD89AB23A207E29BB7C4FCB75408D09299E0D7A20B2E7C743E5C83BFD92E8F115E7A657CE4E9C368FF4F451E8D9FE7A63E4C776A67EDBF7A360A39",
+    name: "Samsung Galaxy S25 Ultra",
+    price: 1399,
+    details: {
+      screen: "6.9-inch Dynamic AMOLED 2X, QHD+, 120Hz",
+      cpu: "Snapdragon 8 Elite Gen 4",
+      gpu: "Adreno 830",
+      camera: "200MP quad",
+      extras: ["S Pen", "5000mAh battery"],
+    },
+  },
+  {
+    img: "https://api.samsungmobilepress.com/api/v1/file/E2D865121417BED4CCCE3AB6288204C6D10F27F744C5DA9475826F3CB5DC71EF261AC479715828213145AFB12DE9D44B464767C4A30B4E584FA0694EC4CE33A95AF3914FF18C9539AD4BDB058282C9FA128C39363B2D1503347D5496C2410128A8340AD04090BD6582AE881B89F5B2257FA7343BBEC5725513CA21B107939A25B9AF41361FF726E729CE0E44560746EC",
+    name: "Samsung Galaxy S25+",
+    price: 1099,
+    details: {
+      screen: "6.7-inch Dynamic AMOLED 2X, FHD+, 120Hz",
+      cpu: "Snapdragon 8 Elite Gen 4",
+      gpu: "Adreno 830",
+      camera: "50MP triple",
+      extras: ["4900mAh battery", "Wireless charging"],
+    },
+  },
+  {
+    img: "https://asset.openshop.uz/uploads/products/photos/202603/kG39RABtgoeoeNCYQZK0RwFLSAVbhNMi.jpg",
+    name: "Samsung Galaxy S25",
+    price: 949,
+    details: {
+      screen: "6.2-inch Dynamic AMOLED 2X, FHD+, 120Hz",
+      cpu: "Snapdragon 8 Elite Gen 4",
+      gpu: "Adreno 830",
+      camera: "50MP triple",
+      extras: ["4000mAh battery", "HDR10+"],
+    },
+  },
+  {
+    img: "https://asset.openshop.uz/uploads/products/photos/202603/xpn1i1Oqt0OM9CVqiR8YInUCaQGbZt2I.jpg",
+    name: "Samsung Galaxy S24 FE",
+    price: 649,
+    details: {
+      screen: "6.7-inch Dynamic AMOLED 2X, 120Hz",
+      cpu: "Exynos 2400e",
+      gpu: "Xclipse 940",
+      camera: "50MP triple",
+      extras: ["4700mAh battery", "45W charging"],
+    },
+  },
+  {
+    img: "https://m.media-amazon.com/images/I/51h+k57DtNL.jpg",
+    name: "Samsung Galaxy Z Flip6",
+    price: 1099,
+    details: {
+      screen: "6.7-inch AMOLED foldable, 120Hz + 3.4-inch cover",
+      cpu: "Snapdragon 8 Gen 3",
+      gpu: "Adreno 750",
+      camera: "50MP + 12MP dual",
+      extras: ["Flex Mode", "4000mAh battery"],
+    },
+  },
+  {
+    img: "https://asset.openshop.uz/uploads/products/photos/202603/0wUb9E5F6IRXYp4m3gVxMXIeEnguOyEM.jpg",
+    name: "Samsung Galaxy Z Fold6",
+    price: 1699,
+    details: {
+      screen: "7.6-inch AMOLED foldable, 120Hz + 6.3-inch cover",
+      cpu: "Snapdragon 8 Gen 3",
+      gpu: "Adreno 750",
+      camera: "50MP triple",
+      extras: ["Multi-tasking split screen", "4400mAh battery"],
+    },
+  },
 ];
 
+let galaxyTabs = [
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/sg/sm-x930nzaaxsp/gallery/sg-galaxy-tab-s11-ultra-sm-x930-563126-sm-x930nzaaxsp-548810587?$Q90_1248_936_F_PNG$",
+    name: "Samsung Galaxy Tab S11 Ultra Wi-Fi",
+    price: 1299,
+    details: {
+      screen: "14.6-inch Dynamic AMOLED 2X, 120Hz, 2960×1848",
+      cpu: "Snapdragon 8 Gen 3",
+      gpu: "Adreno 750",
+      camera: "13MP + 8MP rear, 12MP front",
+      extras: ["Wi-Fi 6E", "11200mAh battery", "S Pen support"],
+    },
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/uk/sm-x936bzareub/gallery/uk-galaxy-tab-s11-ultra-sm-x930-563805-sm-x936bzareub-548920879?$Q90_1248_936_F_PNG$",
+    name: "Samsung Galaxy Tab S11 Ultra 5G",
+    price: 1399,
+    details: {
+      screen: "14.6-inch Dynamic AMOLED 2X, 120Hz",
+      cpu: "Snapdragon 8 Gen 3",
+      gpu: "Adreno 750",
+      camera: "13MP + 8MP rear, 12MP front",
+      extras: ["5G connectivity", "S Pen", "11200mAh battery"],
+    },
+  },
+  {
+    img: "https://re.now/cdn/shop/files/OPM3074_Samsung_Galaxy-Tab-S11-Ultra_Gray_image1.png?v=1760200340",
+    name: "Samsung Galaxy Tab S11 Wi-Fi",
+    price: 999,
+    details: {
+      screen: "12.4-inch AMOLED, 120Hz",
+      cpu: "Snapdragon 8 Gen 3",
+      gpu: "Adreno 750",
+      camera: "13MP rear, 12MP front",
+      extras: ["Wi-Fi 6E", "10090mAh battery", "S Pen support"],
+    },
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/ph/sm-x400nzaaxtc/gallery/ph-galaxy-tab-s10-lite-sm-x406-sm-x400nzaaxtc-548868949?$720_576_JPG$",
+    name: "Samsung Galaxy Tab S10 Lite Wi-Fi",
+    price: 499,
+    details: {
+      screen: "10.4-inch LCD, 90Hz",
+      cpu: "Snapdragon 7 Gen 1",
+      gpu: "Adreno 644",
+      camera: "8MP rear, 5MP front",
+      extras: ["Wi-Fi only", "7040mAh battery"],
+    },
+  },
+  {
+    img: "https://castore.uz/upload/iblock/20d/g0aw67fs4kn4otwrwqj1q8noz7sfvut8/planshet-samsung-galaxy-tab-s10-lite-128gb-gray.png",
+    name: "Samsung Galaxy Tab S10 Lite 5G",
+    price: 599,
+    details: {
+      screen: "10.4-inch LCD, 90Hz",
+      cpu: "Snapdragon 7 Gen 1",
+      gpu: "Adreno 644",
+      camera: "8MP rear, 5MP front",
+      extras: ["5G support", "7040mAh battery"],
+    },
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/uz_ru/sm-x626bzarsoz/gallery/uz-ru-galaxy-tab-s-sm-x626bzarsoz-combo-gray-546513286?$Q90_1248_936_F_PNG$",
+    name: "Samsung Galaxy Tab S10 FE+ 5G",
+    price: 699,
+    details: {
+      screen: "12.4-inch AMOLED, 120Hz",
+      cpu: "Exynos 1380",
+      gpu: "Mali-G68",
+      camera: "12MP rear, 8MP front",
+      extras: ["5G", "10090mAh battery", "S Pen support"],
+    },
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/ie/sm-x526bzareub/gallery/ie-galaxy-tab-s10-fe-sm-x526-542862-sm-x526bzareub-545676351?$720_576_JPG$",
+    name: "Samsung Galaxy Tab S10 FE 5G",
+    price: 599,
+    details: {
+      screen: "10.9-inch AMOLED, 120Hz",
+      cpu: "Exynos 1380",
+      gpu: "Mali-G68",
+      camera: "12MP rear, 8MP front",
+      extras: ["5G", "8800mAh battery", "S Pen support"],
+    },
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/uk/sm-x230nzareub/gallery/uk-galaxy-tab-a11-plus-sm-x230-570754-sm-x230nzareub-550010001?$Q90_1248_936_F_PNG$",
+    name: "Samsung Galaxy Tab A11+ Wi-Fi",
+    price: 299,
+    details: {
+      screen: "10.5-inch LCD, 90Hz",
+      cpu: "Snapdragon 680",
+      gpu: "Adreno 610",
+      camera: "8MP rear, 5MP front",
+      extras: ["Wi-Fi only", "7040mAh battery"],
+    },
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/sg/sm-x236bzaaxsp/gallery/sg-galaxy-tab-a11-plus-sm-x230-573234-sm-x236bzaaxsp-550374372?$Q90_1248_936_F_PNG$",
+    name: "Samsung Galaxy Tab A11+ 5G",
+    price: 349,
+    details: {
+      screen: "10.5-inch LCD, 90Hz",
+      cpu: "Snapdragon 695 5G",
+      gpu: "Adreno 619",
+      camera: "8MP rear, 5MP front",
+      extras: ["5G support", "7040mAh battery"],
+    },
+  },
+  {
+    img: "https://switch.com.kw/cdn/shop/files/ae-galaxy-tab-a11-sm-x130-sm-x133nzaamea-549055431.avif?v=1763160553&width=1214",
+    name: 'Samsung Galaxy Tab A11 (8.7")',
+    price: 199,
+    details: {
+      screen: "8.7-inch LCD, 60Hz",
+      cpu: "MediaTek Helio G80",
+      gpu: "Mali-G52",
+      camera: "8MP rear, 2MP front",
+      extras: ["Wi-Fi only", "5100mAh battery"],
+    },
+  },
+  {
+    img: "https://kontakt.ge/media/catalog/product/cache/fbd42596869cc4deb59edfc1ed742a64/t/m/tm-dg-tbq-1105-tb-04267_1.jpg",
+    name: 'Samsung Galaxy Tab A11 LTE (8.7")',
+    price: 229,
+    details: {
+      screen: "8.7-inch LCD, 60Hz",
+      cpu: "MediaTek Helio G80",
+      gpu: "Mali-G52",
+      camera: "8MP rear, 2MP front",
+      extras: ["LTE support", "5100mAh battery"],
+    },
+  },
+  {
+    img: "https://assets.asaxiy.uz/product/items/desktop/6993b5d1eea172c7a3389cbedd5d72ac2026011922002767905dl5xVTwLmq.jpg.webp",
+    name: "Samsung Galaxy Tab S10+ 5G",
+    price: 899,
+    details: {
+      screen: "12.4-inch AMOLED, 120Hz",
+      cpu: "Snapdragon 8 Gen 2",
+      gpu: "Adreno 740",
+      camera: "13MP + 8MP rear, 12MP front",
+      extras: ["5G", "10090mAh battery", "S Pen support"],
+    },
+  },
+  {
+    img: "https://assets.asaxiy.uz/product/items/desktop/eda80a3d5b344bc40f3bc04f65b7a3572023120218244699644U3AF012mjk.png.webp",
+    name: "Samsung Galaxy Tab A9+ 5G",
+    price: 349,
+    details: {
+      screen: "11-inch LCD, 90Hz",
+      cpu: "Snapdragon 695 5G",
+      gpu: "Adreno 619",
+      camera: "8MP rear, 5MP front",
+      extras: ["5G", "7040mAh battery"],
+    },
+  },
+  {
+    img: "https://exitocol.vtexassets.com/arquivos/ids/32774003/tablet-samsung-galaxy-tab-a9-128gb-11-pulgadas-pulgadas-wifi.jpg?v=639090064798830000",
+    name: "Samsung Galaxy Tab A9 (LTE)",
+    price: 249,
+    details: {
+      screen: "10.5-inch LCD, 60Hz",
+      cpu: "Snapdragon 680",
+      gpu: "Adreno 610",
+      camera: "8MP rear, 5MP front",
+      extras: ["LTE", "7040mAh battery"],
+    },
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/levant/sm-x616bzaemea/gallery/levant-galaxy-tab-s9-fe-plus-sm-x616-sm-x616bzaemea-538914210?$Q90_1248_936_F_PNG$",
+    name: "Samsung Galaxy Tab S9 FE+ 5G",
+    price: 699,
+    details: {
+      screen: "12.4-inch LCD, 120Hz",
+      cpu: "Exynos 1380",
+      gpu: "Mali-G68",
+      camera: "12MP rear, 8MP front",
+      extras: ["5G", "10090mAh battery", "S Pen support"],
+    },
+  },
+  {
+    img: "https://assets.asaxiy.uz/product/items/desktop/d2362bbf30e1ca6e3480f8184f899a5d2024080815225879182Qm3m6IlK5k.webp",
+    name: "Samsung Galaxy Tab S9 FE 5G",
+    price: 599,
+    details: {
+      screen: "10.9-inch LCD, 120Hz",
+      cpu: "Exynos 1380",
+      gpu: "Mali-G68",
+      camera: "12MP rear, 8MP front",
+      extras: ["5G", "8800mAh battery", "S Pen support"],
+    },
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/uz_ru/sm-x916bzaaskz/gallery/uz-ru-galaxy-tab-s9-ultra-5g-x916-sm-x916bzaaskz-537830411?$Q90_1248_936_F_PNG$",
+    name: "Samsung Galaxy Tab S9 Ultra 5G",
+    price: 1299,
+    details: {
+      screen: "14.6-inch AMOLED, 120Hz",
+      cpu: "Snapdragon 8 Gen 2",
+      gpu: "Adreno 740",
+      camera: "13MP + 8MP rear, 12MP front",
+      extras: ["5G", "11200mAh battery", "S Pen support"],
+    },
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/uz_ru/sm-x816bzaaskz/gallery/uz-ru-galaxy-tab-s9-plus-5g-x816-sm-x816bzaaskz-thumb-537829782",
+    name: "Samsung Galaxy Tab S9+ 5G",
+    price: 1099,
+    details: {
+      screen: "12.4-inch AMOLED, 120Hz",
+      cpu: "Snapdragon 8 Gen 2",
+      gpu: "Adreno 740",
+      camera: "13MP rear, 12MP front",
+      extras: ["5G", "10090mAh battery", "S Pen support"],
+    },
+  },
+];
+let galaxyWatches = [
+  {
+    img: "https://hnsgsfp.imgix.net/4/images/detailed/167/Slide1_n3t1-qa.JPG?fit=fill&bg=0FFF&w=1536&h=901&auto=format,compress",
+    name: "Samsung Galaxy Watch8 Classic (LTE, 46 mm)",
+    price: 499,
+    details: {
+      screen: "1.5-inch Super AMOLED, Always-On",
+      cpu: "Exynos W940",
+      gpu: "Mali-G68",
+      sensors: ["Heart rate", "ECG", "SpO2", "Blood pressure"],
+      battery: "590mAh, 40h",
+      extras: ["LTE connectivity", "IP68", "Sapphire glass"],
+    },
+  },
+  {
+    img: "https://castore.uz/upload/iblock/9fa/7obmhr11m1qfaw64rw6y3ldl5xj2y81s/smart-chasy-samsung-galaxy-watch8-classic-46mm-black.jpg",
+    name: "Samsung Galaxy Watch8 Classic (Bluetooth, 46 mm)",
+    price: 449,
+    details: {
+      screen: "1.5-inch Super AMOLED, Always-On",
+      cpu: "Exynos W940",
+      gpu: "Mali-G68",
+      sensors: ["Heart rate", "ECG", "SpO2"],
+      battery: "590mAh, 40h",
+      extras: ["Bluetooth 5.3", "IP68", "Sapphire glass"],
+    },
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/uk/f2507/gallery/uk-galaxy-watch8-l330-sm-l330ndaaeua-547704595?$Q90_1248_936_F_PNG$",
+    name: "Samsung Galaxy Watch8 (Bluetooth, 44 mm)",
+    price: 399,
+    details: {
+      screen: "1.4-inch Super AMOLED",
+      cpu: "Exynos W940",
+      gpu: "Mali-G68",
+      sensors: ["Heart rate", "Sleep tracking", "SpO2"],
+      battery: "425mAh, 30h",
+      extras: ["Bluetooth 5.3", "IP68"],
+    },
+  },
+  {
+    img: "https://media.ldlc.com/r1600/ld/products/00/06/25/88/LD0006258877.jpg",
+    name: "Samsung Galaxy Watch8 (Bluetooth, 40 mm)",
+    price: 379,
+    details: {
+      screen: "1.2-inch Super AMOLED",
+      cpu: "Exynos W940",
+      gpu: "Mali-G68",
+      sensors: ["Heart rate", "Sleep tracking"],
+      battery: "300mAh, 24h",
+      extras: ["Bluetooth 5.3", "IP68"],
+    },
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/uk/2407/gallery/uk-galaxy-watch7-l315-sm-l315fzgaeua-542218010?$624_624_PNG$",
+    name: "Samsung Galaxy Watch7 (Bluetooth, 44 mm)",
+    price: 349,
+    details: {
+      screen: "1.4-inch Super AMOLED",
+      cpu: "Exynos W930",
+      gpu: "Mali-G68",
+      sensors: ["Heart rate", "SpO2", "Sleep tracking"],
+      battery: "425mAh, 30h",
+      extras: ["Bluetooth 5.2", "IP68"],
+    },
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/uk/2407/gallery/uk-galaxy-watch7-l300-sm-l300nzgaeua-542217969?$624_624_PNG$",
+    name: "Samsung Galaxy Watch7 (Bluetooth, 40 mm)",
+    price: 329,
+    details: {
+      screen: "1.2-inch Super AMOLED",
+      cpu: "Exynos W930",
+      gpu: "Mali-G68",
+      sensors: ["Heart rate", "Sleep tracking"],
+      battery: "300mAh, 24h",
+      extras: ["Bluetooth 5.2", "IP68"],
+    },
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/africa_en/sm-r390nzaaxfa/gallery/africa-en-galaxy-fit3-r390-sm-r390nzaaxfa-540073853?$Q90_1248_936_F_PNG$",
+    name: "Samsung Galaxy Fit3",
+    price: 99,
+    details: {
+      screen: "1.6-inch AMOLED",
+      cpu: "Low-power MCU",
+      sensors: ["Heart rate", "Step counter", "Sleep tracking"],
+      battery: "200mAh, 10 days",
+      extras: ["Water resistant 5ATM", "Lightweight design"],
+    },
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/levant/2307/gallery/levant-galaxy-watch6-r935-sm-r930nzkamea-537409791?$Q90_1248_936_F_PNG$",
+    name: "Samsung Galaxy Watch6 (40 mm)",
+    price: 299,
+    details: {
+      screen: "1.3-inch Super AMOLED",
+      cpu: "Exynos W930",
+      gpu: "Mali-G68",
+      sensors: ["Heart rate", "ECG", "SpO2"],
+      battery: "300mAh, 24h",
+      extras: ["IP68", "Bluetooth 5.2"],
+    },
+  },
+  {
+    img: "https://www.mobileciti.com.au/media/catalog/product/s/a/samsung-galaxy-watch6-44mm-lte-graphite-6_1.jpg?store=mobileciti&image-type=image",
+    name: "Samsung Galaxy Watch6 (44 mm)",
+    price: 329,
+    details: {
+      screen: "1.5-inch Super AMOLED",
+      cpu: "Exynos W930",
+      gpu: "Mali-G68",
+      sensors: ["Heart rate", "ECG", "SpO2"],
+      battery: "425mAh, 30h",
+      extras: ["IP68", "Bluetooth 5.2"],
+    },
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/uk/2307/gallery/uk-galaxy-watch6-classic-r955-sm-r950nzsaeua-537436695?$Q90_1248_936_F_PNG$",
+    name: "Samsung Galaxy Watch6 Classic (43 mm)",
+    price: 399,
+    details: {
+      screen: "1.3-inch Super AMOLED",
+      cpu: "Exynos W930",
+      gpu: "Mali-G68",
+      sensors: ["Heart rate", "ECG", "SpO2"],
+      battery: "300mAh, 24h",
+      extras: ["Rotating bezel", "IP68"],
+    },
+  },
+  {
+    img: "https://images.samsung.com/uk/galaxy-watch6-classic/feature/galaxy-watch6-classic-small-black.jpg",
+    name: "Samsung Galaxy Watch6 Classic (47 mm)",
+    price: 429,
+    details: {
+      screen: "1.5-inch Super AMOLED",
+      cpu: "Exynos W930",
+      gpu: "Mali-G68",
+      sensors: ["Heart rate", "ECG", "SpO2"],
+      battery: "425mAh, 30h",
+      extras: ["Rotating bezel", "IP68"],
+    },
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/ae/2208/gallery/ae-galaxy-watch5-44mm-sm-r910nzaamea-533201271?$Q90_1248_936_F_PNG$",
+    name: "Samsung Galaxy Watch5 (44 mm)",
+    price: 279,
+    details: {
+      screen: "1.4-inch Super AMOLED",
+      cpu: "Exynos W920",
+      gpu: "Mali-G68",
+      sensors: ["Heart rate", "SpO2", "Sleep tracking"],
+      battery: "410mAh, 30h",
+      extras: ["IP68", "Bluetooth 5.0"],
+    },
+  },
+  {
+    img: "https://castore.uz/upload/iblock/8c1/wrrtsxvou86b62egdy71sn2ljb83t9ue/smart-chasy-samsung-galaxy-watch-5-40mm-graphite.jpg",
+    name: "Samsung Galaxy Watch5 (40 mm)",
+    price: 259,
+    details: {
+      screen: "1.2-inch Super AMOLED",
+      cpu: "Exynos W920",
+      gpu: "Mali-G68",
+      sensors: ["Heart rate", "SpO2", "Sleep tracking"],
+      battery: "284mAh, 24h",
+      extras: ["IP68", "Bluetooth 5.0"],
+    },
+  },
+  {
+    img: "https://images.samsung.com/is/image/samsung/p6pim/uk/2208/gallery/uk-galaxy-watch5-pro-sm-r920nzkaeua-533240016?$Q90_1248_936_F_PNG$",
+    name: "Samsung Galaxy Watch5 Pro",
+    price: 449,
+    details: {
+      screen: "1.4-inch Super AMOLED",
+      cpu: "Exynos W920",
+      gpu: "Mali-G68",
+      sensors: ["Heart rate", "ECG", "SpO2", "GPS"],
+      battery: "590mAh, 80h",
+      extras: ["Titanium body", "IP68", "Route tracking"],
+    },
+  },
+];
+
+let galaxyBuds = [
+  {
+    img: "https://s3.fortifai.uz/shop/moderation/partner-1077/1774340193-%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-03-24%20131519.png",
+    name: "Samsung Galaxy Buds4 Pro",
+    price: 249,
+    details: {
+      sound: "24-bit Hi-Fi, ANC, 360 Audio",
+      chip: "Samsung Seamless Codec",
+      battery: "6h (ANC on), 30h with case",
+      extras: [
+        "IPX7 water resistance",
+        "Wireless charging",
+        "Dual device connection",
+      ],
+    },
+  },
+  {
+    img: "https://s3.fortifai.uz/shop/moderation/partner-1077/1774334454-%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-03-24%20114021.png",
+    name: "Samsung Galaxy Buds4",
+    price: 199,
+    details: {
+      sound: "ANC, Dolby Atmos support",
+      chip: "Samsung Seamless Codec",
+      battery: "6h playback, 28h with case",
+      extras: ["IPX7", "Fast charging", "Bluetooth 5.3"],
+    },
+  },
+  {
+    img: "https://s3.fortifai.uz/shop/moderation/partner-1077/1774330510-%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-03-24%20103359.png",
+    name: "Samsung Galaxy Buds3 FE",
+    price: 129,
+    details: {
+      sound: "ANC, 2-way speakers",
+      chip: "Samsung Codec",
+      battery: "5h playback, 24h with case",
+      extras: ["IPX5 water resistance", "USB-C charging"],
+    },
+  },
+  {
+    img: "https://asset.openshop.uz/uploads/products/photos/202603/y7RiqHH8A8T2iRFB5DxyjhylCREfM3cV.jpg",
+    name: "Samsung Galaxy Buds Core",
+    price: 99,
+    details: {
+      sound: "Basic stereo, no ANC",
+      chip: "Low-power Bluetooth chip",
+      battery: "4h playback, 20h with case",
+      extras: ["Lightweight design", "IPX4 sweat resistance"],
+    },
+  },
+  {
+    img: "https://s3.fortifai.uz/shop/moderation/partner-1077/1762155374-1.png",
+    name: "Samsung Galaxy Buds3 Pro",
+    price: 229,
+    details: {
+      sound: "ANC, 360 Audio, Hi-Fi",
+      chip: "Samsung Seamless Codec",
+      battery: "6h playback, 28h with case",
+      extras: ["IPX7", "Wireless charging", "Dual device pairing"],
+    },
+  },
+  {
+    img: "https://s3.fortifai.uz/shop/moderation/partner-1077/1762152645-3.png",
+    name: "Samsung Galaxy Buds3",
+    price: 179,
+    details: {
+      sound: "ANC, Dolby Atmos",
+      chip: "Samsung Codec",
+      battery: "5h playback, 25h with case",
+      extras: ["IPX5", "USB-C fast charging"],
+    },
+  },
+  {
+    img: "https://macbro.uz/cdn/shop/files/1_8ec6ac13-a330-4f52-8a7a-a8f85bac5242_1220x_crop_center.png?v=1706696890",
+    name: "Samsung Galaxy Buds FE",
+    price: 99,
+    details: {
+      sound: "Basic stereo, ANC lite",
+      chip: "Samsung Codec",
+      battery: "4.5h playback, 20h with case",
+      extras: ["IPX4", "USB-C charging"],
+    },
+  },
+];
+let iPhones = [
+  {
+    img: "https://wefix.co.za/cdn/shop/products/iphone-7-sliver_2.png?v=1763470628",
+    name: "Apple iPhone 7",
+    price: 250,
+    details: {
+      screen: "4.7-inch LCD, 750×1334",
+      cpu: "A10 Fusion",
+      gpu: "PowerVR Series7XT",
+      camera: "12MP single, 4K video",
+      extras: ["Touch ID", "Water resistant"],
+    },
+  },
+  {
+    img: "https://wefix.co.za/cdn/shop/products/iPhone-7-Plus-silver_2.png?v=1675919748",
+    name: "Apple iPhone 7 Plus",
+    price: 300,
+    details: {
+      screen: "5.5-inch LCD, 1080×1920",
+      cpu: "A10 Fusion",
+      gpu: "PowerVR Series7XT",
+      camera: "12MP dual, Portrait Mode",
+      extras: ["Touch ID", "Stereo speakers"],
+    },
+  },
+  {
+    img: "https://wefix.co.za/cdn/shop/products/iPhone-8-Silver.png?v=1763045317&width=1900",
+    name: "Apple iPhone 8",
+    price: 350,
+    details: {
+      screen: "4.7-inch LCD, 750×1334",
+      cpu: "A11 Bionic",
+      gpu: "Apple GPU (3-core)",
+      camera: "12MP single, 4K video",
+      extras: ["Wireless charging", "True Tone"],
+    },
+  },
+  {
+    img: "https://www.tandilphone.com.ar/contenido/productos/original/1706730923.jpeg",
+    name: "Apple iPhone 8 Plus",
+    price: 400,
+    details: {
+      screen: "5.5-inch LCD, 1080×1920",
+      cpu: "A11 Bionic",
+      gpu: "Apple GPU (3-core)",
+      camera: "12MP dual, Portrait Mode",
+      extras: ["Wireless charging", "True Tone"],
+    },
+  },
+  {
+    img: "https://wefix.co.za/cdn/shop/files/iPhone-X-White_0dda18b6-259a-40f9-86e7-726e9f286b83.png?v=1774266654&width=1900",
+    name: "Apple iPhone X",
+    price: 500,
+    details: {
+      screen: "5.8-inch OLED, 1125×2436",
+      cpu: "A11 Bionic",
+      gpu: "Apple GPU",
+      camera: "12MP dual, Portrait Mode",
+      extras: ["Face ID", "HDR Display"],
+    },
+  },
+  {
+    img: "https://wefix.co.za/cdn/shop/products/iPhone-XR-White_9f0a32d2-f886-44bc-a0df-d493e1697b93.png?v=1763046692&width=1900",
+    name: "Apple iPhone XR",
+    price: 450,
+    details: {
+      screen: "6.1-inch LCD, 828×1792",
+      cpu: "A12 Bionic",
+      gpu: "Apple GPU (4-core)",
+      camera: "12MP single, Smart HDR",
+      extras: ["Face ID", "Wide color (P3)"],
+    },
+  },
+  {
+    img: "https://www.repairlabs.ca/wp-content/uploads/Apple_iPhone_Xs_Max_repair_labs.jpg",
+    name: "Apple iPhone XS Max",
+    price: 600,
+    details: {
+      screen: "6.5-inch OLED, 1242×2688",
+      cpu: "A12 Bionic",
+      gpu: "Apple GPU (4-core)",
+      camera: "12MP dual, Smart HDR",
+      extras: ["Face ID", "Dolby Vision"],
+    },
+  },
+  {
+    img: "https://www.repairlabs.ca/wp-content/uploads/Apple_iPhone_Xs_Max_repair_labs.jpg",
+    name: "Apple iPhone XS",
+    price: 550,
+    details: {
+      screen: "5.8-inch OLED, 1125×2436",
+      cpu: "A12 Bionic",
+      gpu: "Apple GPU (4-core)",
+      camera: "12MP dual, Smart HDR",
+      extras: ["Face ID", "Dolby Vision"],
+    },
+  },
+  {
+    img: "https://img.ep-cdn.com/i/500/500/ub/ubcgvrqhifpylxmoedjk/apple-iphone-se-2022-beli-64gb-cene.jpg",
+    name: "Apple iPhone SE (2nd generation)",
+    price: 399,
+    details: {
+      screen: "4.7-inch LCD, 750×1334",
+      cpu: "A13 Bionic",
+      gpu: "Apple GPU (4-core)",
+      camera: "12MP single, Portrait Mode",
+      extras: ["Touch ID", "Wireless charging"],
+    },
+  },
+  {
+    img: "https://www.discoazul.com/uploads/media/images/apple-iphone-11-128-gb-blanco-mwm22ql-a-14.jpg",
+    name: "Apple iPhone 11",
+    price: 550,
+    details: {
+      screen: "6.1-inch LCD, 828×1792",
+      cpu: "A13 Bionic",
+      gpu: "Apple GPU (4-core)",
+      camera: "12MP dual, Night Mode",
+      extras: ["Face ID", "Dolby Vision"],
+    },
+  },
+  {
+    img: "https://www.dxomark.com/wp-content/uploads/medias/post-52400/Apple-iPhone-11-Pro-Max-Midnight-Green-frontimage-1024x768.jpg",
+    name: "Apple iPhone 11 Pro Max",
+    price: 800,
+    details: {
+      screen: "6.5-inch OLED, 1242×2688",
+      cpu: "A13 Bionic",
+      gpu: "Apple GPU (4-core)",
+      camera: "12MP triple, Night Mode",
+      extras: ["Face ID", "Dolby Vision"],
+    },
+  },
+  {
+    img: "https://www.vhv.rs/dpng/d/277-2777332_iphone-11-pro-iphone-11-pro-max-4k.png",
+    name: "Apple iPhone 11 Pro",
+    price: 750,
+    details: {
+      screen: "5.8-inch OLED, 1125×2436",
+      cpu: "A13 Bionic",
+      gpu: "Apple GPU (4-core)",
+      camera: "12MP triple, Night Mode",
+      extras: ["Face ID", "Dolby Vision"],
+    },
+  },
+  {
+    img: "https://www.dxomark.com/wp-content/uploads/medias/post-61183/iphone-12-pro-blue-hero.jpg",
+    name: "Apple iPhone 12",
+    price: 699,
+    details: {
+      screen: "6.1-inch OLED, 1170×2532",
+      cpu: "A14 Bionic",
+      gpu: "Apple GPU (4-core)",
+      camera: "12MP dual, Night Mode",
+      extras: ["Face ID", "MagSafe"],
+    },
+  },
+  {
+    img: "https://www.dxomark.com/wp-content/uploads/medias/post-61584/iphone-12-pro-max-graphite-hero.jpg",
+    name: "Apple iPhone 12 Pro Max",
+    price: 1099,
+    details: {
+      screen: "6.7-inch OLED, 1284×2778",
+      cpu: "A14 Bionic",
+      gpu: "Apple GPU (4-core)",
+      camera: "12MP triple, LiDAR",
+      extras: ["Face ID", "MagSafe"],
+    },
+  },
+  {
+    img: "https://www.dxomark.com/wp-content/uploads/medias/post-61183/iphone-12-pro-blue-hero.jpg",
+    name: "Apple iPhone 12 Pro",
+    price: 999,
+    details: {
+      screen: "6.1-inch OLED, 1170×2532",
+      cpu: "A14 Bionic",
+      gpu: "Apple GPU (4-core)",
+      camera: "12MP triple, LiDAR",
+      extras: ["Face ID", "MagSafe"],
+    },
+  },
+  {
+    img: "https://www.dxomark.com/wp-content/uploads/medias/post-70968/apple_iphone_12_mini_-1024x768.jpg",
+    name: "Apple iPhone 12 mini",
+    price: 649,
+    details: {
+      screen: "5.4-inch OLED, 1080×2340",
+      cpu: "A14 Bionic",
+      gpu: "Apple GPU (4-core)",
+      camera: "12MP dual",
+      extras: ["Face ID", "MagSafe"],
+    },
+  },
+  {
+    img: "https://iplanet.one/cdn/shop/files/iPhone_SE3_Starlight_PDP_Image_Position-1A__en-US_5819858d-8e2a-42bc-a314-24667c52638b.jpg?v=1691140039&width=1920",
+    name: "Apple iPhone SE (3rd generation)",
+    price: 429,
+    details: {
+      screen: "4.7-inch LCD, 750×1334",
+      cpu: "A15 Bionic",
+      gpu: "Apple GPU (4-core)",
+      camera: "12MP single",
+      extras: ["Touch ID", "Wireless charging"],
+    },
+  },
+  {
+    img: "https://assets.getmobil.com/uploads/11147/getmobil-apple-iphone13mini-green-00png-600w.png?w=600",
+    name: "Apple iPhone 13",
+    price: 799,
+    details: {
+      screen: "6.1-inch OLED, 1170×2532",
+      cpu: "A15 Bionic",
+      gpu: "Apple GPU (4-core)",
+      camera: "12MP dual, Cinematic Mode",
+      extras: ["Face ID", "MagSafe"],
+    },
+  },
+  {
+    img: "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-pro-max-01.jpg",
+    name: "Apple iPhone 13 Pro Max",
+    price: 1099,
+    details: {
+      screen: "6.7-inch OLED, 1284×2778",
+      cpu: "A15 Bionic",
+      gpu: "Apple GPU (5-core)",
+      camera: "12MP triple, ProRAW",
+      extras: ["Face ID", "MagSafe"],
+    },
+  },
+  {
+    img: "https://wefix.co.za/cdn/shop/files/iPhone-13-Red_1_1.png?v=1764677129&width=1900",
+    name: "Apple iPhone 13 mini",
+    price: 699,
+    details: {
+      screen: "5.4-inch OLED, 1080×2340",
+      cpu: "A15 Bionic",
+      gpu: "Apple GPU (4-core)",
+      camera: "12MP dual",
+      extras: ["Face ID", "MagSafe"],
+    },
+  },
+  {
+    img: "https://bestcomputers.mn/storage/products/ef199b6dd3f0db2.png",
+    name: "Apple iPhone 14 Plus",
+    price: 999,
+    details: {
+      screen: "6.7-inch OLED, 2778×1284, 60Hz",
+      cpu: "A15 Bionic",
+      gpu: "Apple GPU (5-core)",
+      camera: "12MP dual, Cinematic Mode",
+      extras: ["Face ID", "MagSafe", "Crash Detection"],
+    },
+  },
+  {
+    img: "https://wefix.co.za/cdn/shop/files/iPhone-14-Pro-Space-Black_1_21c1646e-b78b-489e-bded-3eeda0693b80.png?v=1716189105&width=1900",
+    name: "Apple iPhone 14 Pro Max",
+    price: 1199,
+    details: {
+      screen: "6.7-inch OLED, 120Hz ProMotion, 2796×1290",
+      cpu: "A16 Bionic",
+      gpu: "Apple GPU (5-core)",
+      camera: "48MP triple, ProRAW, 8K video",
+      extras: ["Dynamic Island", "Always-On Display", "MagSafe"],
+    },
+  },
+  {
+    img: ".https://wefix.co.za/cdn/shop/files/iPhone-14-Pro-Space-Black_1_21c1646e-b78b-489e-bded-3eeda0693b80.png?v=1716189105&width=1900",
+    name: "Apple iPhone 14 Pro",
+    price: 1099,
+    details: {
+      screen: "6.1-inch OLED, 120Hz ProMotion, 2556×1179",
+      cpu: "A16 Bionic",
+      gpu: "Apple GPU (5-core)",
+      camera: "48MP triple, ProRAW",
+      extras: ["Dynamic Island", "Always-On Display", "MagSafe"],
+    },
+  },
+  {
+    img: "https://snapcraze.co.za/wp-content/uploads/2023/09/iphone-15-blue.jpeg",
+    name: "Apple iPhone 15 Plus",
+    price: 1099,
+    details: {
+      screen: "6.7-inch OLED, 2778×1284, 60Hz",
+      cpu: "A16 Bionic",
+      gpu: "Apple GPU (5-core)",
+      camera: "48MP dual, Cinematic Mode",
+      extras: ["USB-C", "MagSafe", "Crash Detection"],
+    },
+  },
+  {
+    img: "https://wefix.co.za/cdn/shop/files/iphone-15-Pro-blue-titanium_2.png?v=1731322334&width=1900",
+    name: "Apple iPhone 15 Pro Max",
+    price: 1299,
+    details: {
+      screen: "6.7-inch OLED, 120Hz ProMotion, 2796×1290",
+      cpu: "A17 Pro",
+      gpu: "Apple GPU (6-core)",
+      camera: "48MP triple, 5x telephoto",
+      extras: ["Titanium body", "USB-C", "ProMotion"],
+    },
+  },
+  {
+    img: "https://wefix.co.za/cdn/shop/files/iphone-15-Pro-blue-titanium.png?v=1723537309&width=1900",
+    name: "Apple iPhone 15 Pro",
+    price: 1199,
+    details: {
+      screen: "6.1-inch OLED, 120Hz ProMotion, 2556×1179",
+      cpu: "A17 Pro",
+      gpu: "Apple GPU (6-core)",
+      camera: "48MP triple, ProRAW",
+      extras: ["Titanium body", "USB-C", "Dynamic Island"],
+    },
+  },
+  {
+    img: "https://www.dxomark.com/wp-content/uploads/drafts/post-178568/Apple-iPhone-16-Pro-Max_featured-image-packshot-review.png",
+    name: "Apple iPhone 16 Pro Max",
+    price: 1399,
+    details: {
+      screen: "6.9-inch OLED, 120Hz ProMotion, QHD+",
+      cpu: "A18 Bionic",
+      gpu: "Apple GPU (6-core)",
+      camera: "48MP quad, 8K video",
+      extras: ["Dynamic Island", "Always-On", "USB-C Gen 3"],
+    },
+  },
+  {
+    img: "https://wefix.co.za/cdn/shop/files/61Ony8rgwEL._AC_SL1500.jpg?v=1770887017&width=580",
+    name: "Apple iPhone 16 Pro",
+    price: 1299,
+    details: {
+      screen: "6.3-inch OLED, 120Hz ProMotion, FHD+",
+      cpu: "A18 Bionic",
+      gpu: "Apple GPU (6-core)",
+      camera: "48MP triple, ProRAW",
+      extras: ["Dynamic Island", "USB-C Gen 3", "Titanium body"],
+    },
+  },
+  {
+    img: "https://www.androidsage.com/wp-content/uploads/2025/02/iPhone-16e.jpg",
+    name: "Apple iPhone 16e",
+    price: 699,
+    details: {
+      screen: "6.1-inch OLED, 60Hz, FHD+",
+      cpu: "A17 Bionic",
+      gpu: "Apple GPU (5-core)",
+      camera: "12MP dual",
+      extras: ["Face ID", "USB-C", "MagSafe"],
+    },
+  },
+  {
+    img: "https://www.electromart.com.gh/wp-content/uploads/2025/10/3-1.jpg",
+    name: "Apple iPhone 17",
+    price: 1099,
+    details: {
+      screen: "6.5-inch OLED, 120Hz, FHD+",
+      cpu: "A19 Bionic",
+      gpu: "Apple GPU (6-core)",
+      camera: "48MP dual, Cinematic Mode",
+      extras: ["Dynamic Island", "USB-C Gen 4", "MagSafe"],
+    },
+  },
+  {
+    img: "https://www.dxomark.com/wp-content/uploads/2025/09/iPhone-17-Pro-Max.png",
+    name: "Apple iPhone 17 Pro Max",
+    price: 1499,
+    details: {
+      screen: "6.9-inch OLED, 120Hz ProMotion, QHD+",
+      cpu: "A19 Bionic",
+      gpu: "Apple GPU (6-core)",
+      camera: "200MP quad, 8K video",
+      extras: ["Titanium body", "USB-C Gen 4", "Always-On"],
+    },
+  },
+  {
+    img: "https://www.dxomark.com/wp-content/uploads/2025/09/iPhone-17-Pro-Max.png",
+    name: "Apple iPhone 17 Pro",
+    price: 1399,
+    details: {
+      screen: "6.3-inch OLED, 120Hz ProMotion, FHD+",
+      cpu: "A19 Bionic",
+      gpu: "Apple GPU (6-core)",
+      camera: "48MP triple, ProRAW",
+      extras: ["Dynamic Island", "USB-C Gen 4", "Titanium body"],
+    },
+  },
+  {
+    img: "https://gait.com.qa/media/catalog/product/M/G/MG1D4AHA__1.jpg?quality=100&fit=bounds&height=700&width=700",
+    name: "Apple iPhone 17 Air",
+    price: 999,
+    details: {
+      screen: "6.1-inch OLED, 120Hz, FHD+",
+      cpu: "A19 Bionic",
+      gpu: "Apple GPU (5-core)",
+      camera: "12MP dual, Cinematic Mode",
+      extras: ["Lightweight design", "USB-C Gen 4", "MagSafe"],
+    },
+  },
+];
+let appleWatches = [
+  {
+    img: "https://www.idcmayoristas.com/wp-content/uploads/2025/10/MF0J4LWA-NY-1.png",
+    name: "Apple Watch Ultra 3",
+    price: 899,
+    details: {
+      screen: "1.92-inch LTPO OLED, Always-On",
+      cpu: "Apple S10 SiP",
+      gpu: "Apple GPU",
+      sensors: ["Heart rate", "ECG", "SpO2", "Blood pressure", "GPS"],
+      battery: "600mAh, 72h",
+      extras: ["Titanium case", "100m water resistance", "Dual-frequency GPS"],
+    },
+  },
+  {
+    img: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/watch-compare-s11-202509_FMT_WHH?wid=296&hei=296&fmt=jpeg&qlt=90&.v=dWNxM2FBcWh6K3lqd1ZDZ0J0SmQzLzRxZ3huVnJIT2RsYmVuZmY3VmJyWVVRZEpaT1dTYTRVRGJYVlZ5a1RjamJGcXNRQnFCV0w3WVRjTExvdm1ic2Zod2h2SXJqUWFnZjgyKzVoUEVRcndXZEdHNUFPR0hYUU12cjI0VlFzM1A",
+    name: "Apple Watch SE (3rd generation)",
+    price: 299,
+    details: {
+      screen: "1.57-inch Retina OLED",
+      cpu: "Apple S9 SiP",
+      gpu: "Apple GPU",
+      sensors: ["Heart rate", "Fall detection", "Emergency SOS"],
+      battery: "300mAh, 24h",
+      extras: ["Aluminum case", "Water resistant 50m", "Family Setup support"],
+    },
+  },
+  {
+    img: "https://www.apple.com/newsroom/images/2025/09/apple-debuts-apple-watch-series-11-featuring-groundbreaking-health-insights/article/Apple-Watch-Series-11-aluminum-rose-gold-250909_inline.jpg.large.jpg",
+    name: "Apple Watch Series 11",
+    price: 499,
+    details: {
+      screen: "1.78-inch LTPO OLED, Always-On",
+      cpu: "Apple S10 SiP",
+      gpu: "Apple GPU",
+      sensors: ["Heart rate", "ECG", "SpO2", "Sleep tracking"],
+      battery: "350mAh, 36h",
+      extras: [
+        "Aluminum/Stainless steel case",
+        "IP6X dust resistant",
+        "Fast charging",
+      ],
+    },
+  },
+];
+
+let iPads = [
+  {
+    img: "https://www.myimaginestore.com/media/catalog/product/cache/4a48ac28cbb6e9c41470e5be5a6d3043/i/p/ipad_pro_11-in_m5_wifi_silver_pdp_image_position_2__en-in_6.jpg",
+    name: 'Apple iPad Pro 13" (M5)',
+    price: 1499,
+    details: {
+      screen: "13-inch Liquid Retina XDR, 120Hz",
+      cpu: "Apple M5 chip",
+      gpu: "Apple GPU (12-core)",
+      camera: "12MP wide + 10MP ultra-wide, LiDAR",
+      extras: ["Face ID", "Thunderbolt 4", "Apple Pencil Pro support"],
+    },
+  },
+  {
+    img: "https://t.ctcdn.com.br/mRStXAFV6SWRFFMh8KzbJPJFYgA=/fit-in/600x600/filters:fill(transparent):watermark(wm/prd.png,-32p,center,1,none,15)/i1067813.png",
+    name: 'Apple iPad Pro 11" (M5)',
+    price: 1299,
+    details: {
+      screen: "11-inch Liquid Retina, 120Hz",
+      cpu: "Apple M5 chip",
+      gpu: "Apple GPU (12-core)",
+      camera: "12MP wide + 10MP ultra-wide",
+      extras: ["Face ID", "Thunderbolt 4", "Apple Pencil Pro support"],
+    },
+  },
+  {
+    img: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-ipad-air-2nd-gen-wifi-spacegray-202509?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=ejFkbU9MZ3c3VG10WjJvMnd0Uit3b0pJYjdHWnp3SEVyejBPNjljS0p1VVBvRDJ0NGwzQzB3b2hxRnZhMjdVbDNhaXdpb1FXMGlmWkVJNGRaVDhWK3RlVUN5anBMYXArdTZxQXVZNFlaRkg5VWZBZERiOXhhRVdYOGtlaVpRL1NmbW94YnYxc1YvNXZ4emJGL0IxNFp3",
+    name: 'Apple iPad Air 13" (M3)',
+    price: 999,
+    details: {
+      screen: "13-inch Liquid Retina, 120Hz",
+      cpu: "Apple M3 chip",
+      gpu: "Apple GPU (10-core)",
+      camera: "12MP wide",
+      extras: ["Touch ID (top button)", "USB-C", "Apple Pencil support"],
+    },
+  },
+  {
+    img: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-ipad-air-7th-gen-wifi-spacegray-202509?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=ejFkbU9MZ3c3VG10WjJvMnd0Uit3cVN4ckZWRm1jMDB2Mllic1N3NkQ5OFBvRDJ0NGwzQzB3b2hxRnZhMjdVbDNhaXdpb1FXMGlmWkVJNGRaVDhWK3RlVUN5anBMYXArdTZxQXVZNFlaRkV2c29EN2hVeHQvZS9sUi8rUDgwZDhmbW94YnYxc1YvNXZ4emJGL0IxNFp3",
+    name: 'Apple iPad Air 11" (M3)',
+    price: 799,
+    details: {
+      screen: "11-inch Liquid Retina, 120Hz",
+      cpu: "Apple M3 chip",
+      gpu: "Apple GPU (10-core)",
+      camera: "12MP wide",
+      extras: ["Touch ID", "USB-C", "Apple Pencil support"],
+    },
+  },
+  {
+    img: "https://prod-cdn.prod.asbis.io/s3size/el:t/f:webp/rt:fill/plain/s3://cms/product/82/74/82747eb8dfa3668dd4b4b76d63d50d20/250423160108437222.webp",
+    name: "Apple iPad (A16)",
+    price: 599,
+    details: {
+      screen: "10.9-inch Liquid Retina, 60Hz",
+      cpu: "Apple A16 Bionic",
+      gpu: "Apple GPU (5-core)",
+      camera: "12MP wide",
+      extras: ["Touch ID", "USB-C", "Center Stage front camera"],
+    },
+  },
+  {
+    img: "https://www.apple.com/newsroom/images/2024/10/apple-introduces-powerful-new-ipad-mini-built-for-apple-intelligence/article/Apple-iPad-mini-blue-241015_inline.jpg.large.jpg",
+    name: "Apple iPad mini (A17 Pro)",
+    price: 699,
+    details: {
+      screen: "8.3-inch Liquid Retina, 60Hz",
+      cpu: "Apple A17 Pro",
+      gpu: "Apple GPU (6-core)",
+      camera: "12MP wide",
+      extras: ["Touch ID", "USB-C", "Compact design"],
+    },
+  },
+  {
+    img: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-ipad-pro-13inch-6th-gen-wifi-spacegray-202409?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=NlFPcjRNNHN6R2NSYmRWVHhzR3Rna2gvdVVvVjJWR0IwcWV4UEt0bTI3bzBsYjF2Q1hxUjlkOUpsQ015MjBTZ1hkeXdmOFVLL0dnb0R4b2pIdFpETE5sWFdUYy9rMlRpL0hhcEMwQk9lcHBsOXBLS2RKWDIzOFpsSGxJVTh0R1N4MmMrTWJtVGdjdVJhbjRTWlFsT3hB",
+    name: 'Apple iPad Pro 12.9" (6th generation)',
+    price: 1299,
+    details: {
+      screen: "12.9-inch Liquid Retina XDR, 120Hz",
+      cpu: "Apple M2 chip",
+      gpu: "Apple GPU (10-core)",
+      camera: "12MP wide + 10MP ultra-wide, LiDAR",
+      extras: ["Face ID", "Thunderbolt", "Apple Pencil 2 support"],
+    },
+  },
+  {
+    img: "https://m.media-amazon.com/images/I/71VbHaAqbML._AC_UF894,1000_QL80_.jpg",
+    name: "Apple iPad Air (5th generation)",
+    price: 599,
+    details: {
+      screen: "10.9-inch Liquid Retina, 60Hz",
+      cpu: "Apple M1 chip",
+      gpu: "Apple GPU (8-core)",
+      camera: "12MP wide",
+      extras: ["Touch ID", "USB-C", "Apple Pencil 2 support"],
+    },
+  },
+  {
+    img: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-ipad-10th-gen-wifi-silver-202409?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=bVYxZFIrN0ZaQzIrcTMydkF3YkprUnpGUWNkZk1rUTBLUkZDQzJJUmoxUytEdGQrSUJyclRnV0JYdWtYNjJqNFlsNGdDd3FRbHFCcnpRZnZlZVVZRkRMbFM3Y0xReU4ycnhlZkZIQ3M0MGhoM2gvRnJiWU12dkNzSUw4Vk1zM1A",
+    name: "Apple iPad (10th generation)",
+    price: 449,
+    details: {
+      screen: "10.9-inch Liquid Retina, 60Hz",
+      cpu: "Apple A14 Bionic",
+      gpu: "Apple GPU (4-core)",
+      camera: "12MP wide",
+      extras: ["Touch ID", "USB-C", "Center Stage front camera"],
+    },
+  },
+  {
+    img: "https://m.media-amazon.com/images/I/61z99i1QZOL.jpg",
+    name: "Apple iPad mini (6th generation)",
+    price: 499,
+    details: {
+      screen: "8.3-inch Liquid Retina, 60Hz",
+      cpu: "Apple A15 Bionic",
+      gpu: "Apple GPU (5-core)",
+      camera: "12MP wide",
+      extras: ["Touch ID", "USB-C", "Compact design"],
+    },
+  },
+];
+let airPods = [
+  {
+    img: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-4-select-202409_FV1_FMT_WHH?wid=752&hei=636&fmt=jpeg&qlt=90&.v=WnVKRVRUTFVsYThXaWkydWViL1Q3YmRudmFtWnZKZ0szeGF4cDZsczlhOWU5bTRrM1hZbmw5eCtiRXdXMENIbGg5cFlXTXBPaHRzU3RjRTMyRlg3eTd0UkdMSDBFQ1ZUdTNVa3daQmFjd1hvRUpUejJXeHlMOSsrLy9ZbWFSbmo",
+    name: "Apple AirPods 4",
+    price: 179,
+    details: {
+      sound: "Adaptive EQ, Spatial Audio",
+      chip: "Apple H2 chip",
+      battery: "6h listening, 30h with case",
+      extras: ["IPX4 sweat resistance", "Lightning/MagSafe charging"],
+    },
+  },
+  {
+    img: "https://cdn11.bigcommerce.com/s-sp9oc95xrw/images/stencil/1280x1280/products/49545/124999/AirPods-4-3_488cca85-2c6b-4804-8c0c-4924eb4c28b9__04554.1759133022.png?c=2",
+    name: "Apple AirPods 4 with Active Noise Cancellation",
+    price: 229,
+    details: {
+      sound: "ANC, Adaptive Transparency, Spatial Audio",
+      chip: "Apple H2 chip",
+      battery: "6h listening (ANC on), 28h with case",
+      extras: ["IPX4", "Wireless charging", "Dual device connection"],
+    },
+  },
+  {
+    img: "https://mrsmart.ci/wp-content/uploads/2025/09/AIRPODS-PRO-3-DE-FACE.png",
+    name: "Apple AirPods Pro 3",
+    price: 279,
+    details: {
+      sound: "ANC, Adaptive Transparency, Personalized Spatial Audio",
+      chip: "Apple H3 chip",
+      battery: "6h listening, 30h with case",
+      extras: [
+        "IPX7 water resistance",
+        "MagSafe charging",
+        "Conversation Awareness",
+      ],
+    },
+  },
+  {
+    img: "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111851_sp880-airpods-Pro-2nd-gen.png",
+    name: "Apple AirPods Pro 2",
+    price: 249,
+    details: {
+      sound: "ANC, Adaptive Transparency, Spatial Audio",
+      chip: "Apple H2 chip",
+      battery: "6h listening, 30h with case",
+      extras: ["IPX4", "MagSafe charging", "Find My support"],
+    },
+  },
+  {
+    img: "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111856_airpods-2gen-wireless-case.png",
+    name: "Apple AirPods (2nd generation)",
+    price: 129,
+    details: {
+      sound: "Basic stereo, no ANC",
+      chip: "Apple H1 chip",
+      battery: "5h listening, 24h with case",
+      extras: ["Lightning charging", "Voice-activated Siri"],
+    },
+  },
+  {
+    img: "https://www.laptopsdirect.co.uk/Images/MME73ZMA_3_Supersize.jpg?v=2",
+    name: "Apple AirPods (3rd generation) with Lightning Case",
+    price: 169,
+    details: {
+      sound: "Adaptive EQ, Spatial Audio",
+      chip: "Apple H1 chip",
+      battery: "6h listening, 30h with case",
+      extras: ["Lightning charging", "IPX4 sweat resistance"],
+    },
+  },
+  {
+    img: "https://www.appliancesdirect.co.uk/Images/MME73ZMA_3_Supersize.jpg?v=2",
+    name: "Apple AirPods (3rd generation) with MagSafe Case",
+    price: 179,
+    details: {
+      sound: "Adaptive EQ, Spatial Audio",
+      chip: "Apple H1 chip",
+      battery: "6h listening, 30h with case",
+      extras: ["MagSafe wireless charging", "IPX4 sweat resistance"],
+    },
+  },
+  {
+    img: "https://www.apple.com/newsroom/images/product/airpods/standard/apple_airpods-max_hero_12082020_big.jpg.large.jpg",
+    name: "Apple AirPods Max",
+    price: 549,
+    details: {
+      sound: "High-fidelity audio, ANC, Spatial Audio",
+      chip: "Apple H1 chip (dual)",
+      battery: "20h listening with ANC",
+      extras: ["Aluminum ear cups", "Smart Case", "Lightning charging"],
+    },
+  },
+];
+
+let products = [
+  ...samsungProducts,
+  ...galaxyTabs,
+  ...galaxyWatches,
+  ...galaxyBuds,
+  ...iPhones,
+  ...appleWatches,
+  ...iPads,
+  ...airPods
+];
+
+
 let productsget = JSON.parse(localStorage.getItem('products'))
-
-if (productsget && productsget.length > 9) {
-    products = productsget
+if (!productsget) {
+  localStorage.setItem("products", JSON.stringify(products))
 }
-
-let urlget = localStorage.getItem('url')
-let nameeget = localStorage.getItem('name')
-let priceget = localStorage.getItem('price')
-if (urlget && nameeget && priceget) {
-    if (urlget != products[products.length - 1].img || nameeget != products[products.length - 1].name || priceget != products[products.length - 1].price) {
-        products.push(
-            {
-                img: urlget,
-                name: nameeget,
-                price: priceget
-            }
-        )
-        localStorage.setItem('products', JSON.stringify(products))
-    }
+if (productsget && productsget.length > products.length) {
+  products = productsget
 }
-

@@ -21,6 +21,11 @@ html {
 
 }
 
+.footer__icons li a {
+    color: #636363;
+}
+
+
 button,
 a {
     cursor: pointer;
