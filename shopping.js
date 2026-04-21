@@ -10,6 +10,10 @@ let totalPrice = document.querySelector(".total__price");
 let cart = JSON.parse(localStorage.getItem("cart")) || []
 let ul = document.querySelector(".store__left ul")
 
+if(cart.length == 0){
+  window.location.href = '/shop.html'
+}
+
 ul.innerHTML = ""
 
 cart.forEach((item, index) => {
@@ -43,7 +47,35 @@ function decrease(i) {
     document.getElementById(`num-${i}`).textContent = quantities[i]
     hisobla()
   }
+    if (quantities[i] === 0) {
+      cart.splice(i, 1)
+      quantities.splice(i, 1)
+      localStorage.setItem("cart", JSON.stringify(cart))
+     if(cart.length == 0){
+  window.location.href = '/shop.html'
 }
+ul.innerHTML = ""
+
+cart.forEach((item, index) => {
+  ul.innerHTML += `
+    <li class="store__cart">
+        <img src="${item.img}" class="product__img" />
+        <p class="cart__info">${item.name}</p>
+        <div class="cart__number">
+            <button onclick="decrease(${index})">-</button>
+            <p id="num-${index}">1</p>
+            <button onclick="increase(${index})">+</button>
+        </div>
+        <div class="cart__price">$${item.price}</div>
+     
+    </li>
+    <hr />
+    `
+})
+
+    }                 
+  }
+
 
 
 function hisobla() {
@@ -91,3 +123,6 @@ apply.addEventListener("click", function () {
   }
 });
 hisobla()
+if(cart.length == 0){
+  window.location.href = '/shop.html'
+}

