@@ -50,6 +50,7 @@ header {
     height: 60px;
     border-radius: 50%;
 }
+
 .footer__icons li a {
     color: #636363bd;
 }
@@ -594,7 +595,7 @@ nav {
     font-weight: 500;
     font-style: Medium;
     font-size: 15px;
-    
+
     line-height: 24px;
     letter-spacing: 0%;
     text-align: center;
@@ -896,7 +897,8 @@ button:active {
     color: #636363bd;
     position: relative;
 }
-.cart__num{
+
+.cart__num {
     font-size: 14px;
     position: absolute;
     top: -5px;
@@ -904,9 +906,9 @@ button:active {
     background-color: blue;
     color: #fff;
     border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 18px;
     height: 18px;
 }
