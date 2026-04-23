@@ -255,7 +255,11 @@ nav {
     background-color: blue;
     color: #fff;
     border-radius: 50%;
-    padding: 1px 4px;
+   width: 18px;
+   height: 18px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .card h3 {

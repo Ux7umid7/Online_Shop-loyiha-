@@ -904,8 +904,11 @@ button:active {
     background-color: blue;
     color: #fff;
     border-radius: 50%;
-    padding: 1px 4px;
-    
+display: flex;
+align-items: center;
+justify-content: center;
+    width: 18px;
+    height: 18px;
 }
 .header__link:hover {
     color: black;
