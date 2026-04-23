@@ -32,14 +32,15 @@ form.addEventListener("change", () => {
             (apple.checked && el.name.toLowerCase().includes("apple")) ||
             (!samsung.checked && !apple.checked)
 
-        let price =
-            (cheap.checked && el.price < 500) ||
-            (ex.checked && el.price >= 500) ||
-            (!cheap.checked && !ex.checked)
+        let price = (cheap.checked && el.price < 500) || (ex.checked && el.price >= 500) || (!cheap.checked && !ex.checked)
 
         return brand && price
     })
-
+        if (cheap.checked == true) {
+            filtered.sort((a, b) => a.price - b.price)
+        } else if (ex.checked == true) {
+            filtered.sort((a, b) => b.price - a.price)
+        }
     render(filtered)
 })
 samsung.addEventListener("change", () => {
