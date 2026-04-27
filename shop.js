@@ -21,9 +21,7 @@ password.textContent += savedPassword
 
 let cart_num = document.querySelector(".cart__num")
 let cartget = JSON.parse(localStorage.getItem("cart")) || []
-// 
-// 
-// 
+
 form.addEventListener("change", () => {
     let filtered = products.filter((el) => {
 
