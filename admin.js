@@ -51,22 +51,6 @@ search.addEventListener('input', () => {
     render(filtered)
 })
 
-// function render(array) {
-//     ul.innerHTML = ''
-
-//     array.forEach((el, index) => {
-//         ul.innerHTML += `
-//         <li class="card">
-//             <img src="${el.img}">
-//             <h3>${el.name}</h3>
-//             <p class="narx">$${el.price}</p>
-//             <button onclick="editItem(${index})" class="edit"><i class="fa-solid fa-pen"></i></button>
-//             <button onclick="deleteItem(${index})" class="del"><i class="fa-solid fa-trash"></i></button>
-//         </li>
-//         `
-//     })
-// }
-
 function render(array) {
     ul.innerHTML = ''
 

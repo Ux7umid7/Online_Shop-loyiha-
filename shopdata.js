@@ -1386,8 +1386,8 @@ let products = [
   ...airPods
 ];
 
-
 let productsget = JSON.parse(localStorage.getItem('products'))
+
 if (!productsget) {
   localStorage.setItem("products", JSON.stringify(products))
 }
