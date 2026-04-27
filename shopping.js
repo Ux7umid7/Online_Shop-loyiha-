@@ -106,4 +106,8 @@ function hisobla() {
       ul.textContent = ""
       window.location.href = "./paymet.html";
     });
-  
+
+hisobla()
+if(cart.length == 0){
+  window.location.href = '/shop.html'
+}
