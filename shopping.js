@@ -101,28 +101,9 @@ function hisobla() {
   localStorage.setItem('total', totalValue)
 }
 
-apply.addEventListener("click", function () {
-  if (card.value == "") {
-    carderror.textContent = "Enter your card number!";
-    carderror.style.color = "red";
-  }
 
-  console.log();
-
-  if (card.value.length != 16) {
-    carderror.textContent =
-      "There is an error in the card number. Please enter your full card number!";
-    carderror.style.color = "red";
-  } else {
-    carderror.textContent = "Click Checkout!";
-    carderror.style.color = "green";
     chek.addEventListener("click", function () {
       ul.textContent = ""
       window.location.href = "./paymet.html";
     });
-  }
-});
-hisobla()
-if(cart.length == 0){
-  window.location.href = '/shop.html'
-}
+  
