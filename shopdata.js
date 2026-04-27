@@ -1391,6 +1391,6 @@ let productsget = JSON.parse(localStorage.getItem('products'))
 if (!productsget) {
   localStorage.setItem("products", JSON.stringify(products))
 }
-if (productsget && productsget.length > products.length) {
+else{
   products = productsget
 }

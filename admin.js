@@ -23,7 +23,10 @@ form.addEventListener('submit', function (e) {
     let newProduct = {
         img: url.value.trim(),
         name: namee.value.trim(),
-        price: price.value.trim()
+        price: price.value.trim(),
+          details: {
+        battery: "No details"
+    }
     }
 
     products.push(newProduct)
@@ -48,17 +51,39 @@ search.addEventListener('input', () => {
     render(filtered)
 })
 
+// function render(array) {
+//     ul.innerHTML = ''
+
+//     array.forEach((el, index) => {
+//         ul.innerHTML += `
+//         <li class="card">
+//             <img src="${el.img}">
+//             <h3>${el.name}</h3>
+//             <p class="narx">$${el.price}</p>
+//             <button onclick="editItem(${index})" class="edit"><i class="fa-solid fa-pen"></i></button>
+//             <button onclick="deleteItem(${index})" class="del"><i class="fa-solid fa-trash"></i></button>
+//         </li>
+//         `
+//     })
+// }
+
 function render(array) {
     ul.innerHTML = ''
 
-    array.forEach((el, index) => {
+    array.forEach((el) => {
+        let realIndex = products.findIndex(item => item.name === el.name)
+
         ul.innerHTML += `
         <li class="card">
             <img src="${el.img}">
             <h3>${el.name}</h3>
             <p class="narx">$${el.price}</p>
-            <button onclick="editItem(${index})" class="edit"><i class="fa-solid fa-pen"></i></button>
-            <button onclick="deleteItem(${index})" class="del"><i class="fa-solid fa-trash"></i></button>
+            <button onclick="editItem(${realIndex})" class="edit">
+                <i class="fa-solid fa-pen"></i>
+            </button>
+            <button onclick="deleteItem(${realIndex})" class="del">
+                <i class="fa-solid fa-trash"></i>
+            </button>
         </li>
         `
     })
