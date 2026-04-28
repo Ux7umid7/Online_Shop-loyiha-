@@ -29,7 +29,7 @@ form.addEventListener('submit', function (e) {
         }
     }
 
-    products.push(newProduct)
+    products.unshift(newProduct)
 
     localStorage.setItem("products", JSON.stringify(products))
 
