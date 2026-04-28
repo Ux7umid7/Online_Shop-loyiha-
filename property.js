@@ -27,27 +27,36 @@ function render(pr) {
 <img src="${pr.img}" alt="" class="img">
 `
     det.innerHTML = `
+    <div>
     <h2 class="title-a">Availability</h2>
     <ul class = "avail">
         <li>Free delivery: 1–2 days</li>
         <li>In stock: Today</li>
         <li>Warranty: 1 year</li>
     </ul>
-    <hr>
+   
+    </div>
+   <hr>
+    <div>
     <h2 class="title-b">Details</h2>
     <ul class="details-list">
+    <div>
         ${Object.entries(pr.details || {})
             .map(([key, value]) => {
                 if (key === "extras") return "";
                 return `<li>${value ?? "—"}</li>`;
             })
             .join("")}
+</div>
 <hr>
+    <div>
         ${pr.details?.extras
             ? `<li><b>Extras:</b></li>` +
-            pr.details.extras.map(e => `<li>• ${e}</li>`).join("")
+            pr.details.extras.map(e => `<li>${e}</li>`).join("")
             : ""}
+</div>
     </ul>
+    </div>
 `;
 
 }

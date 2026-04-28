@@ -24,9 +24,9 @@ form.addEventListener('submit', function (e) {
         img: url.value.trim(),
         name: namee.value.trim(),
         price: price.value.trim(),
-          details: {
-        battery: "No details"
-    }
+        details: {
+            battery: "No details"
+        }
     }
 
     products.push(newProduct)
@@ -73,24 +73,24 @@ function render(array) {
     })
 }
 
-function editItem(index){
-  editModal.style.display = "flex"
- currentIndex = index
+function editItem(index) {
+    editModal.style.display = "flex"
+    currentIndex = index
 
-  document.querySelector(".img").value = products[index].img
-  document.querySelector(".title").value = products[index].name
-  document.querySelector(".cost").value = products[index].price
-  document.querySelector(".property").value = Object.values(products[index].details)[0]
+    document.querySelector(".img").value = products[index].img
+    document.querySelector(".title").value = products[index].name
+    document.querySelector(".cost").value = products[index].price
+    document.querySelector(".property").value = Object.values(products[index].details)[0]
 }
-x.addEventListener("click" , ()=>{
-    editModal.style.display ="none"
+x.addEventListener("click", () => {
+    editModal.style.display = "none"
 })
 document.addEventListener('keydown', (e) => {
     if (e.key == 'Escape') {
-     editModal.style.display ="none"
+        editModal.style.display = "none"
     }
 })
-editForm.addEventListener("submit" , (e)=>{
+editForm.addEventListener("submit", (e) => {
     e.preventDefault()
 
     let newImg = document.querySelector(".img").value.trim()
@@ -127,5 +127,22 @@ function deleteItem(index) {
     localStorage.setItem("products", JSON.stringify(products))
     render(products)
 }
+
+let scrollBtn = document.querySelector(".scroll-top");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        scrollBtn.classList.add("show");
+    } else {
+        scrollBtn.classList.remove("show");
+    }
+});
+
+scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
 
 render(products)

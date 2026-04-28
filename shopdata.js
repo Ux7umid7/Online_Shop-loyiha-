@@ -35,18 +35,18 @@ let samsungProducts = [
       extras: ["S Pen", "IP68", "5000mAh battery"],
     },
   },
-  {
-    img: "https://media.cnn.com/api/v1/images/stellar/prod/new-project-13-20260225182554866.jpg?q=h_720,w_1280,c_fill,c_auto,g_auto,c_auto_pad,ar_16:9",
-    name: "Samsung Galaxy S26+",
-    price: 1199,
-    details: {
-      screen: "6.7-inch Dynamic AMOLED 2X, FHD+, 120Hz",
-      cpu: "Snapdragon 8 Elite Gen 5",
-      gpu: "Adreno 840",
-      camera: "50MP triple, 4K video",
-      extras: ["Wireless charging", "4900mAh battery"],
-    },
-  },
+  // {
+  //   img: "https://media.cnn.com/api/v1/images/stellar/prod/new-project-13-20260225182554866.jpg?q=h_720,w_1280,c_fill,c_auto,g_auto,c_auto_pad,ar_16:9",
+  //   name: "Samsung Galaxy S26+",
+  //   price: 1199,
+  //   details: {
+  //     screen: "6.7-inch Dynamic AMOLED 2X, FHD+, 120Hz",
+  //     cpu: "Snapdragon 8 Elite Gen 5",
+  //     gpu: "Adreno 840",
+  //     camera: "50MP triple, 4K video",
+  //     extras: ["Wireless charging", "4900mAh battery"],
+  //   },
+  // },
   {
     img: "https://asset.openshop.uz/uploads/products/photos/202603/uYKyTzOY1PSi0d6gCh1a3F6Wx5rgbKDw.jpg",
     name: "Samsung Galaxy S26",
